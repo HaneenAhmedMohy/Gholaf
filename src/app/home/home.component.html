@@ -1,0 +1,75 @@
+<!-- header section  -->
+
+<app-header></app-header>
+
+<!--  four section [featured] -->
+<app-featured></app-featured>
+
+  <section id="download" class=" pt-5 pb-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6 text-center text-white">
+                  <p>استمتع بالقراءة علي جهازك <br>اينما شئت</p>
+                  <div class="mb-4">
+                      <button type="button" class="btn text-white  pl-4 pr-4">احصل علي غلاف من متجر ابل<a class="text-white" href="https://www.apple.com/lae/ios/app-store/"></a></button>
+                  </div>
+                  <div class="pb-4">
+                      <button type="button" class="btn text-white "><a class="text-white" href="https://play.google.com/store/apps?hl=en">احصل علي غلاف من متجر اندرويد</a></button>
+                  </div>
+  
+               </div>
+               <div class="col-sm-6">
+                 <img src="assets/mobile.png" alt="Card image cap" class="img-fluid mobile"/>
+               </div>
+          </div>
+      </div>   
+  </section>
+
+ 
+    <section id="upload-file" class=" pb-5 mb-5">
+        <div class="upload-content-box">
+            <div class="upload-content-box-inner">
+                <h1 class="text-black "> اذا كنت من محبي الكتابة يمكنك الان<br> مشاركة كتاباتك علي موقع غلاف</h1>
+                <span class="">قم برفع كتابك ثم انتظر تواصلنا معك </span>
+                <div class="upload-btn mt-3 p-3">
+                    <button type="button" class="btn" (click)="open(content)"> رفع الملف <i class="fas fa-upload pl-2"></i></button>
+
+                </div>
+
+            </div>
+        </div>
+</section>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title"></h4>
+    <button type="button" class="close text-left" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true" class="text-white ">&times;</span>
+    </button>  
+  </div>
+    
+  <div class="modal-body">
+    <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="float-right email">بريدك الالكتروني</label>
+            <input type="email" class="form-control text-right" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="البريد الالكتروني">
+            <!-- <input type="file" class="form-control text-right" id="exampleInputEmail1" aria-describedby="emailHelp" > -->
+          </div>
+          <div class="form-group text-right">
+              <!-- <label for="exampleInputEmail1" class="float-right email">بريدك الالكتروني</label> -->
+              <!-- <input type="email" class="form-control text-right" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="البريد الالكتروني"> -->
+              <input type="file" class="form-control text-right" id="exampleInputEmail1" aria-describedby="emailHelp" >
+            </div>
+         
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn pl-4 pr-4 text-white" (click)="c('Close click')">تاكيد </button>
+  </div>
+</ng-template>
+
+
+<!-- team section  -->
+
+<app-team></app-team>
+  

@@ -1,0 +1,39 @@
+[
+    {
+        "src" : "../assets/1.jpg",
+        "bookName" : "بتا ",
+        "stars" : "****** ",
+        "author" : "محمد صادق "
+    },
+    {
+        "src" : "../assets/1.jpg",
+        "bookName" : "بتا ",
+        "stars" : "****** ",
+        "author" : "محمد صادق "
+    },
+    {
+        "src" : "../assets/1.jpg",
+        "bookName" : "ها ",
+        "stars" : "****** ",
+        "author" : "محمد صادق "
+    },
+    {
+        "src" : "../assets/1.jpg",
+        "bookName" : "بتا ",
+        "stars" : "****** ",
+        "author" : "محمد صادق "
+    },
+    {
+        "src" : "../assets/1.jpg",
+        "bookName" : "بتا ",
+        "stars" : "****** ",
+        "author" : "محمد صادق "
+    },
+    {
+        "src" : "../assets/1.jpg",
+        "bookName" : "ها ",
+        "stars" : "****** ",
+        "author" : "محمد صادق "
+    }
+
+]

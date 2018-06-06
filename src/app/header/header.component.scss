@@ -1,0 +1,44 @@
+header{
+    height: 90vh;
+    /* width: 100vw; */
+    /* width: calc(100vw - 17px); */
+    background-image: url("/assets/header.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    vertical-align: middle; 
+    
+}
+.table{
+    height: 90vh;
+    width: 70vw;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    margin:0 auto;
+}
+
+
+.cell{
+display: table-cell;
+vertical-align: middle;
+}
+header h1{
+  font-family:title;
+  font-weight: bold;
+  font-size:170px; 
+}
+header p{
+    font-family: paragrafs;
+    font-size: 30px;
+}
+
+
+p,input,.input-group-text{
+    font-family:'Noto Naskh Arabic';
+    font-size: 20px;
+  }
+  .input-group-text,.input-group-prepend{
+      background-color: #187676;
+      border: 0;
+  } 

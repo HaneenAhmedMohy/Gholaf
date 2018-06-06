@@ -1,0 +1,40 @@
+.footer{
+    background-color: #533a4f;
+    color: white;
+    padding: 50px 0px;
+    h3{
+        font-family: Abdo Logo;
+    }
+    p,h5{
+        font-family: Noto Naskh Arabic;
+    }
+    .f{
+        background-color:#4267b2;
+        border-radius: 100px;
+    }
+    .t{
+        background-color:#1da1f2; 
+        border-radius: 100px;
+    }
+    .g{
+        background-color: #d54b41;
+        border-radius: 100px;
+    }
+    input,textarea{
+        text-align: right;
+        font-family: Noto Naskh Arabic;
+    }
+    button{
+        background-color: #177777;
+        color: white;
+        font-family: Noto Naskh Arabic;
+    }
+}
+
+footer{
+    background-color: #332031;
+    color: white;
+    p{
+        margin-bottom: 0px;
+    }
+}
