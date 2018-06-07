@@ -1,0 +1,58 @@
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="row" >
+
+        <div class="col-sm-4 text-right mb-4" *ngFor=" let catigoryData of catigoryData">
+            <img src="{{catigoryData.src}}" class="img-fluid"/>
+            <p>
+                <span class="float-left"> {{catigoryData.stars}} </span> <span class="float-right"> {{catigoryData.bookName}}</span>
+            </p>
+            <p class="text-right">{{catigoryData.author}}</p>
+
+        </div>
+        <!-- <div class="col-sm-4">
+            <form method="post" action="add.php">
+                Name: <input name="name" /><br>
+                email: <input name="email" /><br>
+                phone: <input name="phone" /><br>
+                <input type="submit" value="send"/>
+            </form>
+        </div> -->
+      </div>
+      
+    </div>
+    <div class="col-sm-3 text-right">
+      <div class="row">
+        <div class="col-12 mb-4">
+          <h3>السعر</h3>
+          <hr/>
+        </div>
+        <div class="col-12 mb-4">
+            <h3>فئه الكتاب</h3>
+            <hr/>
+           <div><span>خيال علمى</span> <input type="checkbox"></div>
+           <div> <span> دراما</span> <input type="checkbox"/></div>
+           <div> <span> مغامرة</span> <input type="checkbox"/></div>
+           <div> <span> رومانسية</span> <input type="checkbox"/></div>
+           <div> <span> غموض</span> <input type="checkbox"/></div>
+           <div> <span> رعب</span> <input type="checkbox"/></div>
+           <div> <span> دينية</span> <input type="checkbox"/></div>
+           <div> <span> قصص قصيرة</span> <input type="checkbox"/></div>
+           <div> <span> تاريخ</span> <input type="checkbox"/></div>  
+      </div>
+      <div class="col-12 mb-4">
+        <h3>الكاتتب</h3>
+        <hr/>
+        <div> <span> احسان عبد القدوس</span> <input type="checkbox"/></div>
+        <div> <span> احلام مستغانمى</span> <input type="checkbox"/></div>
+        <div> <span> أحمد خالد توفيق</span> <input type="checkbox"/></div>
+        <div> <span>  أحمد مراد</span> <input type="checkbox"/></div>
+        <div> <span> عمر طاهر</span> <input type="checkbox"/></div>
+        <div> <span> محمد صادق</span> <input type="checkbox"/></div>
+        <div> <span> نجيب محفوظ</span> <input type="checkbox"/></div>
+      </div>
+    </div>
+  </div>
+</div>

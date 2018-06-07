@@ -1,0 +1,30 @@
+nav{
+    background-color: #533a4f;
+    // margin-bottom: 50px;
+    .navbar-brand{
+        font-family: Alfarooq-Regular;
+        color: white;
+        font-family: Abdo Logo;
+        font-size: 30px;
+        margin-right: 0px;
+    }
+    
+    a{
+        font-family: Noto Naskh Arabic;
+        color: white;
+        
+    }
+
+    a:hover ,a:focus{
+        color: #177777;
+    }
+    
+    .compactive{
+        color: white;
+    }
+}
+
+// @font-face{
+//     font-family: logo;
+//     src:url("..C:/Users/iso/Desktop/f-pro/gholaf/fonts/Alfarooq.ttf");
+// }

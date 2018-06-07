@@ -1,0 +1,17 @@
+hr{
+    width: 20px;
+    /* color: #177777; */
+    text-align: right;
+    height: 1px;
+    background-color: #177777;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+h3{
+    margin-bottom: 2px;
+    font-family: Abdo Logo;
+}
+span{
+    margin-right: 7px;
+    font-family: Noto Naskh Arabic;
+}

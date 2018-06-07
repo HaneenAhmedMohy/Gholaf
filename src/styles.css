@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: title;
+    src:url("assets/fonts/Alfarooq.ttf");
+}
+
+@font-face{
+    font-family: paragrafs;
+    src:url("assets/fonts/NotoNaskhArabic-Regular.ttf");
+}
+
+@font-face{
+    font-family: subtitle;
+    src:url("assets/fonts/Abdo.Fonts_Abdo.Logo_.ttf");
+}

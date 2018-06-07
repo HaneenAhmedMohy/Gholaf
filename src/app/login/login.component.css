@@ -1,0 +1,31 @@
+
+.container{
+    margin-top: 50px;
+    /* margin: auto; */
+}
+.col-sm-5{
+    background-color: #efefef;
+    margin: auto;
+
+}
+.head{
+    background-color: #533a4f;
+    font-family: 'Abdo Logo';
+    font-size: 30px;
+}
+.form-body{
+    background-color: #efefef;
+    
+}
+button{
+    background-color: #187676;
+    font-family: 'Noto Naskh Arabic';
+}
+p,span{
+    color:#187676;
+    font-family: 'Noto Naskh Arabic';
+}
+input{
+    font-family: 'Noto Naskh Arabic';
+    border:1px solid #187676;
+}
