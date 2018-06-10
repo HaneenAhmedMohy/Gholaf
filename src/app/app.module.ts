@@ -38,6 +38,7 @@ import { MostdownloadedComponent } from './mostdownloaded/mostdownloaded.compone
 import { NewestbooksComponent } from './newestbooks/newestbooks.component';
 import { HeaderComponent } from './header/header.component';
 import { CartComponent } from './cart/cart.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 const routes: Routes =  [
@@ -52,7 +53,8 @@ const routes: Routes =  [
   { path: "cart", component: CartComponent },
   { path: "register", component: RegestComponent },
   { path: "category", component: CategoryComponent },
-  {path:'', component:FeaturedComponent } 
+  {path:'', component:FeaturedComponent },
+  {path:"payment",component:PaymentComponent} 
   // {path:'login',component:LoginComponent}
 ]
   
@@ -72,7 +74,8 @@ const routes: Routes =  [
     MostdownloadedComponent,
     NewestbooksComponent,
     HeaderComponent,
-    CartComponent
+    CartComponent,
+    PaymentComponent
   ],
   imports: [
 
