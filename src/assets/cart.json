@@ -3,15 +3,15 @@
         "src" : "../assets/2.jpg",
         "id" : "1",
         "quntity" : "3",
-        "pricepdf" : "30",
-        "pricehard" : "60"
+        "pricepdf" : "40",
+        "pricehard" : "80"
     },
     {
         "src" : "../assets/3.jpg",
         "id" : "3",
         "quntity" : "2",
-        "pricepdf" : "30",
-        "pricehard" : "60"
+        "pricepdf" : "20",
+        "pricehard" : "50"
     },
     {
         "src" : "../assets/4.jpg",
