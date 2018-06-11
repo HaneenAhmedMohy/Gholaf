@@ -1,0 +1,123 @@
+.row.paytable{
+  justify-content: center;
+}
+
+/*********personalInfo*********/
+
+.container{
+    margin-top: 50px;
+}
+/deep/ .card-header {
+    background-color: #177777;
+    font-family: TitlesFont;
+    font-size: 30px;
+    width: 100%;
+    text-align: right;
+}
+/deep/ a , /deep/ a:hover{
+    color: white;
+}
+/deep/ .card-body{
+    padding: 0;
+}
+.form-body,.col-lg-12{
+    background-color: #efefef;   
+}
+.payment{
+    margin-top:0;
+}
+button{
+    background-color: #187676;
+    font-family: RegularFonts;
+}
+input{
+    font-family: RegularFonts;
+    border:1px solid #187676;
+}
+
+/************table****************/
+
+table { 
+    width: 90%; 
+    border-collapse: collapse;
+    margin:0 auto;
+  }
+  
+  th { 
+    background: #3e0766; 
+    color: white; 
+    font-size: 20px;
+    font-weight: 100; 
+    font-family: TitlesFont;
+  }
+  tbody td{
+    background-color: white;
+    font-size: 15px;
+  }
+  td, th { 
+    padding: 6px;
+    text-align: center; 
+  
+  }
+  td{
+      font-family: RegularFonts;
+      padding: 20px;
+  }
+
+  /********popup*********/
+h3{
+  font-family: TitlesFont;
+  color:#177777;
+}
+h6{
+  font-family: RegularFonts;
+  color:#177777;
+}
+#upload-file{
+  background-color: #f7f7f7;
+  padding-top: 100px;
+}
+
+
+.upload-content-box{
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+.upload-content-box-inner{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.upload-content-box-inner h1{
+  animation-delay:.5s;
+  animation-duration:.5s;
+  font-family: 'Abdo Logo';
+  font-weight: bold;
+  font-size: 35px;
+
+}
+.upload-content-box-inner span{
+    font-family: 'Noto Naskh Arabic';
+    color: grey;
+    font-weight: bold;
+    
+}
+ .upload-btn button{
+    background-color: #187676;
+     color: white;
+     font-family: 'Noto Naskh Arabic';
+     font-weight: bold;
+     
+}
+.modal-header{
+    background-color: #533a4f;
+}
+.email,.modal-footer button,input{
+    font-family: 'Noto Naskh Arabic'; 
+    float:right;
+}
+.modal-footer button{
+    background-color: #187676;
+
+}
