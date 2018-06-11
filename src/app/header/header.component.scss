@@ -1,5 +1,5 @@
 header{
-    height: 90vh;
+    height: 95vh;
     /* width: 100vw; */
     /* width: calc(100vw - 17px); */
     background-image: url("/assets/header.png");
@@ -7,6 +7,7 @@ header{
     background-position: center;
     background-size: cover;
     vertical-align: middle; 
+  
     
 }
 .table{
@@ -42,3 +43,23 @@ p,input,.input-group-text{
       background-color: #187676;
       border: 0;
   } 
+  .input-group-prepend{
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+
+  }
+
+  @media (max-width: 570px) {
+    header {
+        padding: 50px 0px;
+        h1{
+            font-size: 100px;
+        }
+        p{
+            font-size: 20px;
+        }
+        input{
+            font-size: 10px;
+        }
+    }
+}

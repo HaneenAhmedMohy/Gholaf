@@ -1,7 +1,7 @@
 
 <section style="overflow-x:auto;" class="cart mt-5">
-
-  <table class="text-center">
+<div class="container ">
+  <table class="text-center mb-5">
       <thead>
           <tr class="text-center">
             <th class="text-center"> حذف </th>
@@ -16,28 +16,31 @@
                 <td><i class="fas fa-trash-alt"></i></td>
                 <td>{{cart.id}}</td>
                 <td>
-                  <span>  {{cart.pricepdf}} تحميل الكتاب </span><br/>
-                  <span> {{cart.pricehard}} الحصول على نسخة </span>
-
+                  <div class="text-right mar">
+                      <span>  {{cart.pricepdf}} EGP تحميل الكتاب </span><input type="radio" name="download" value="download"/><br/>
+                      <span> {{cart.pricehard}} EGP الحصول على نسخة </span><input type="radio" name="pdf" value="pdf"/>
+                  </div>
                 </td>
-                <td>{{cart.quantity}}</td>
+                <td><div class="border p-1"> {{cart.quntity}} </div></td>
                 <td><img src="{{cart.src}}" class="img-fluid"/></td>
               </tr>
-              <!-- <tr>
-                  <td>James</td>
-                  <td>Matman</td>
-                  <td>Matman</td>
-                  <td>Matman</td>
-                  <td>Chief Sandwich Eater</td>
-                </tr> -->
-              <!-- <tr>
-                <td>The</td>
-                <td>Tick</td>
-                <td>Tick</td>
-                <td>Tick</td>
-                <td>Crimefighter Sorta</td>
-              </tr> -->
-              </tbody>
+          </tbody>
   </table>
-    
+
+  <div class="col-sm-12 mb-5 text-right ">
+      <p class="addColor"> ارسال كهدية</p> <input type="checkbox"/>
+      <p class="text-secondary">    سيتم اضافة 40 جنية <span>*</span>  </p>
+  </div>
+
+  <div class="col-sm-12 mb-5 text-center ">
+      <div class="col-sm-3 addBorder py-3">
+        <span class="addColor">120 EGP</span><span class="text-secondary"> ا جمالى المبلغ</span>
+      </div>
+  </div>
+
+  <div class="col-sm-3 mb-2 text-center ">
+    <!-- btn-block -->
+    <button class="btn y  btn-block btn-lg" routerLink="/payment"> متابعة الشراء </button>
+</div>
+</div>   
 </section>

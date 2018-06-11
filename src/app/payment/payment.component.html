@@ -1,0 +1,109 @@
+<div class="container">
+  <div class="row paytable">
+      <div class="col-sm-12 col-md-10 col-lg-8 text-center">
+
+          <ngb-accordion [closeOthers]="true" activeIds="static-1">
+            <ngb-panel id="static-1" title="بياناتك">
+              <ng-template ngbPanelContent>
+                  <div class="form-body">
+                    <form action="" method="post">
+                      <div class="form-row pt-5">
+                          <input type="text" class="form-control bg-transparent mb-4 mx-5 text-right " placeholder="الاسم الشخصى" required>
+                          <input type="text" class="form-control bg-transparent mb-4 mx-5 text-right" placeholder="اسم العائلة" required>
+                          <input type="text" class="form-control bg-transparent mb-4 mx-5 text-right" placeholder="العنوان">
+                          <input type="text" class="form-control bg-transparent mb-4 mx-5 text-right" placeholder="المدينة" required>
+                          <input type="text" class="form-control bg-transparent mb-4 mx-5 text-right" placeholder="المحافظة" required>
+                          <input type="text" class="form-control bg-transparent mb-2 mx-5 text-right" placeholder="رقم الهاتف" required>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-lg-12">
+                                  <button type="button" class="btn text-white  btn-lg mx-5 my-5">الحفظ و الاستمرار</button>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </form>
+                  </div>
+              </ng-template>
+            </ngb-panel>
+            <ngb-panel id="static-2" title="ملخص الطلبات">
+              <ng-template ngbPanelContent>
+
+                   <table class="text-center my-5">
+                      <thead>
+                          <tr class="text-center">
+                            <th class="text-center"> حذف </th>
+                            <th> تفاصيل التوصيل</th>
+                            <th> السعر </th> 
+                            <th> الكمية </th>
+                            <th> الكتاب </th>
+                          </tr>
+                      </thead>
+                          <tbody>
+                              <tr>
+                                <td><i class="fas fa-trash-alt"></i></td>
+                                <td>سيتم توصيل الطلب فى موعد اقصاه 31/5/2018</td>
+                                <td>
+                                  <p class="my-1">  تحميل الكتاب </p><br/>
+                                  <p class="my-1">  الحصول على نسخة </p>
+
+                                </td>
+                                <td>2</td>
+                                <td><img src="../../assets/img/فى بيتنا رجل.jpg" class="img-fluid"/></td>
+                              </tr>
+                          </tbody>
+                  </table>
+                  <button type="button" class="btn text-white  btn-lg mx-5 my-5">الحفظ و الاستمرار</button>
+
+              </ng-template>
+            </ngb-panel>
+            <ngb-panel id="static-3" title="الدفع">
+              <ng-template ngbPanelContent>
+                  <div class="container payment">
+                      <div class="row">
+                          <div class="col-lg-12 pt-5">
+                            <img src="../../assets/img/visa.png" class="img-fluid" alt="Responsive image">
+                            <img src="../../assets/img/paypal.png" class="img-fluid mx-4" alt="Responsive image">
+                            <img src="../../assets/img/mastercard.png" class="img-fluid" alt="Responsive image">
+                          </div>
+                          <div class="form-body">
+                            <form action="" method="post">
+                              <div class="form-row pt-5">
+                                  <input type="text" class="form-control bg-transparent mb-4 mx-5 text-right " placeholder="رقم الكارت" required>
+                                  <input type="text" class="form-control bg-transparent mb-4 mx-5 text-right " placeholder="تاريخ الانتهاء    شهر/يوم" required>
+                                  <input type="text" class="form-control bg-transparent mb-4 mx-5 text-right " placeholder="الكود السرى" required>
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="col-lg-12">
+                                          <button type="button" class="btn text-white  btn-lg mx-5 my-5" (click)="open(content)">الاستمرار للدفع</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                            </form>
+                          </div>
+                      </div>
+                  </div>
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+
+      </div>
+  </div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title"></h4>
+    <button type="button" class="close text-left" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true" class="text-white ">&times;</span>
+    </button>  
+  </div>
+    
+  <div class="modal-body text-center my-5">
+      <img src="../../assets/img/checked.png" class="img-fluid mb-5" alt="Responsive image">
+      <h3 class="mb-5">شكرا</h3>
+      <h6>سيصل طلبك فى موعد اقصاه 21/7/2018</h6>
+  </div>
+</ng-template>
+

@@ -13,3 +13,13 @@ a.nav-link:hover,a.nav-link:active{
 li:hover,li:active{
 	background-color: #deeced;
 }
+ @media (max-width: 570px){
+ 	ul{
+ 		flex-wrap:nowrap;
+ 	}
+ }
+ @media (min-width: 570px){
+ 	ul{
+ 		flex-wrap:nowrap;
+ 	}
+ }

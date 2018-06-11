@@ -22,7 +22,11 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "@ng-bootstrap/ng-bootstrap": "^2.0.0",
+<<<<<<< HEAD
     "@toverux/ngx-sweetalert2": "^4.0.0",
+=======
+    "animate.css": "^3.6.1",
+>>>>>>> 8fa2a868ae74d76935753d44d68f507c29d95e61
     "bootstrap": "^4.1.1",
     "core-js": "^2.4.1",
     "jquery": "^3.3.1",
@@ -32,7 +36,7 @@
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "~1.7.4",
+    "@angular/cli": "^1.7.4",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
     "@types/jasmine": "~2.8.3",

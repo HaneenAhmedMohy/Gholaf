@@ -7,6 +7,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  
 
   closeResult: string;
   constructor(private modalService: NgbModal) {
