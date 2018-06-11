@@ -1,0 +1,31 @@
+table { 
+    width: 100%; 
+    border-collapse: collapse;
+    margin:0 auto;
+    
+  }
+ 
+  tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  th { 
+    background-color: #533a4f;
+    color: white; 
+    font-size: 20px;
+    font-weight: 100; 
+    font-family: subtitle;
+  }
+  tbody td{
+    background-color: white;
+  }
+  td, th { 
+    padding: 6px; 
+    text-align: center; 
+  
+  }
+  td{
+      font-family: paragrafs;
+      padding: 20px;
+  }
+
+

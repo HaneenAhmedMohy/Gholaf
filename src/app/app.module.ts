@@ -9,12 +9,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
-
-
-
-
-
+import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
 
 
 // import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -39,6 +34,18 @@ import { NewestbooksComponent } from './newestbooks/newestbooks.component';
 import { HeaderComponent } from './header/header.component';
 import { BookComponent } from './book/book.component';
 import { AuthorComponent } from './author/author.component';
+import { CartComponent } from './cart/cart.component';
+import { HeadComponent } from './head/head.component';
+import { SideComponent } from './side/side.component';
+import { ContentComponent } from './content/content.component';
+import { FootComponent } from './foot/foot.component';
+import { PesonalInfoComponent } from './pesonal-info/pesonal-info.component';
+import { MyOrderComponent } from './my-order/my-order.component';
+import { EditInfoComponent } from './edit-info/edit-info.component';
+import { FavouriteComponent } from './favourite/favourite.component';
+import { LogoutComponent } from './logout/logout.component';
+
+
 
 
 const routes: Routes =  [
@@ -50,10 +57,20 @@ const routes: Routes =  [
     {path:'famousauthors' , component:FamousauthorsComponent}
   ]},
   { path: "login", component: LoginComponent },
+  { path: "cart", component: CartComponent },
   { path: "register", component: RegestComponent },
   { path: "category", component: CategoryComponent },
-  {path:'', component:FeaturedComponent } 
-  // {path:'login',component:LoginComponent}
+  {path:'', component:FeaturedComponent } ,
+
+  { path: "personal", component: PesonalInfoComponent },
+  { path: "favourite", component: FavouriteComponent },
+  { path: "myorder", component: MyOrderComponent },
+  { path: "editinfo", component: EditInfoComponent },
+  { path: "logout", component:  HomeComponent }
+
+  
+
+ 
 ]
   
 @NgModule({
@@ -73,24 +90,27 @@ const routes: Routes =  [
     NewestbooksComponent,
     HeaderComponent,
     BookComponent,
-    AuthorComponent
+    AuthorComponent,
+    CartComponent,
+    HeadComponent,
+    SideComponent,
+    ContentComponent,
+    FootComponent,
+    PesonalInfoComponent,
+    MyOrderComponent,
+    EditInfoComponent,
+    FavouriteComponent,
+    LogoutComponent
   ],
   imports: [
-
-
     BrowserModule,
     RouterModule.forRoot(routes),
     NgbModule.forRoot(),
     HttpClientModule,
+    SweetAlert2Module.forRoot(),
     // AngularFontAwesomeModule,
     FormsModule,
     RouterModule,
-
-
-
-    
-    
-    
     // BsDropdownModule.forRoot(),
     // TooltipModule.forRoot(),
     // ModalModule.forRoot()

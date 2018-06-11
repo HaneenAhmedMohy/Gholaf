@@ -1,0 +1,43 @@
+
+<section style="overflow-x:auto;" class="cart mt-5">
+
+  <table class="text-center">
+      <thead>
+          <tr class="text-center">
+            <th class="text-center"> حذف </th>
+            <th> كود الكتاب </th>
+            <th> السعر </th>
+            <th> الكمية </th>
+            <th> الكتاب </th>
+          </tr>
+          </thead>
+          <tbody  *ngFor=" let cart of cartData">
+              <tr>
+                <td><i class="fas fa-trash-alt"></i></td>
+                <td>{{cart.id}}</td>
+                <td>
+                  <span>  {{cart.pricepdf}} تحميل الكتاب </span><br/>
+                  <span> {{cart.pricehard}} الحصول على نسخة </span>
+
+                </td>
+                <td>{{cart.quantity}}</td>
+                <td><img src="{{cart.src}}" class="img-fluid"/></td>
+              </tr>
+              <!-- <tr>
+                  <td>James</td>
+                  <td>Matman</td>
+                  <td>Matman</td>
+                  <td>Matman</td>
+                  <td>Chief Sandwich Eater</td>
+                </tr> -->
+              <!-- <tr>
+                <td>The</td>
+                <td>Tick</td>
+                <td>Tick</td>
+                <td>Tick</td>
+                <td>Crimefighter Sorta</td>
+              </tr> -->
+              </tbody>
+  </table>
+    
+</section>

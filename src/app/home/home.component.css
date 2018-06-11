@@ -1,3 +1,4 @@
+
 /*  download */
 img.mobile{
     width: 400px;
@@ -65,4 +66,10 @@ button{
 .modal-footer button{
     background-color: #187676;
 
+}
+
+@media (max-width: 570px) {
+    .img-fluid {
+        display: none;
+    }
 }

@@ -20,34 +20,161 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <form class="form-inline my-2 my-lg-0">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
-                            <li class="nav-item active">
-                                    <a class="nav-link" href="#" routerLink="register"> انشاء حساب <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item active">
-                                    <a class="nav-link" href="#" routerLink="login"> تسجيل الدخول <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item active">
-                                    <a class="nav-link" href="#contact" routerLink="contact"> اتصل بنا  <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item active">
-                                    <a class="nav-link" href="#contact" routerLink="/about"> عن غلاف <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item active">
-                                    <a class="nav-link" href="#" routerLink="/category"> التصنيفات <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item active">
-                                
-                                    <a class="nav-link" href="#" routerLink=""> الصفحةالرئيسة <span class="sr-only">(current)</span></a>
-                            </li>  
-                          </ul>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#contact" routerLink="/cart">  <i class="fas fa-shopping-cart"></i> <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                             <a class="nav-link"  (click)="open(content)"> انشاء حساب <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                              <a class="nav-link" (click)="openlogin(content1)"> تسجيل الدخول <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                              <a class="nav-link" href="#contact" routerLink="contact"> اتصل بنا  <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                              <a class="nav-link" href="#" routerLink="/category"> التصنيفات <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                                <a class="nav-link" href="#" routerLink=""> الصفحةالرئيسة <span class="sr-only">(current)</span></a>
+                        </li>  
+                </ul>
                 </form>
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
-              <!-- <a class="navbar-brand" href="#" id="logo">  غلاف   </a>   -->
-              <span class="navbar-brand" href="#" id="logo">  غلاف   </span>  
-            </div>
-        </div>
-    </nav>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
+                <!-- <a class="navbar-brand" href="#" id="logo">  غلاف   </a>   -->
+                <span class="navbar-brand" href="#" id="logo">  غلاف   </span>  
+</div>
+</div>
+</nav>
 <!-- End Nav Section -->
+
+<!-- Registration Form -->
+
+<ng-template #content let-c="close" let-d="dismiss">
+<div class="modal-header p-0">
+<div class="head text-center  text-white ">انشاء حساب </div>
+<button type="button" class="close p-0 m-0 mr-1"  (click)="d('Cross click')">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+
+<div class="modal-body p-0">
+        
+        <div class="form-body">
+
+                <form action="" method="post" #frm="ngForm" (ngSubmit)="addUser(frm)">
+                        <div class="form-row pt-5">
+                        <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right" ngModel #firstName="ngModel"  name="firstname" placeholder="الاسم الاول" required pattern="[a-zA-Z][a-zA-Z]+">
+
+                                <div  *ngIf="firstName.touched"  class="ml-5 mr-5 divalert">
+                                <div *ngIf="firstName.errors?.required" class="alert alert-danger text-right">
+                                        يجب عليك ادخال اسمك الاول
+                                </div>
+                                <div *ngIf="firstName.errors?.pattern" class="alert alert-danger text-right ">
+                                        اسمك الاول لابد ان يحتوي فقط علي حروف 
+                                </div>
+                                </div>
+
+                        <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right" ngModel  #lastName="ngModel" name="lastname"placeholder="الاسم الثاني" required pattern="[a-zA-Z][a-zA-Z]+">
+                                <div  *ngIf="lastName.touched"  class="ml-5 mr-5 divalert">
+                                <div *ngIf="lastName.errors?.required" class=" alert alert-danger text-right">
+                                        يجب عليك ادخال اسمك الاخير
+                                </div>
+                                <div *ngIf="lastName.errors?.pattern" class="alert alert-danger text-right">
+                                        اسمك الاخير لابد ان يحتوي فقط علي حروف 
+                                </div>
+                                </div>
+
+                        <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right" ngModel  #Email="ngModel" name="email" placeholder="البريد الالكتروني"required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                                <div  *ngIf="Email.touched"  class=" ml-5 mr-5 divalert">
+                                <div *ngIf="Email.errors?.required" class="alert alert-danger text-right">
+                                        يجب عليك ادخال بريدك الالكتروني
+                                </div>
+                                <div *ngIf="Email.errors?.pattern" class="alert alert-danger text-right ">
+                                        يجب عليك ادخال بريدك الالكتروني بشكل صحيح 
+                                </div>
+                                </div>
+                        <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right" ngModel  #password="ngModel" type="password" name="pass" placeholder="كلمه المرور" required>
+                                <div  *ngIf="password.touched"  class=" ml-5 mr-5 divalert">
+                                <div *ngIf="password.errors?.required" class=" alert alert-danger text-right">
+                                        يجب عليك ادخال رقمك السري
+                                </div>
+                                </div>
+                        <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right"ngModel   #confirm="ngModel" type="password" name="confirmpass" placeholder="تاكيد كلمه المرور" required>
+
+                                <div  *ngIf="confirm.touched"  class="ml-5 mr-5 divalert">
+                                <div *ngIf="confirm.errors?.required" class=" alert alert-danger text-right">
+                                        يجب عليك ادخال تاكيد الرقم السري
+                                </div>
+                                </div>
+
+                        <button [swal]="['OK', '   تم بنجاج انشاء حساب', 'success']" type="submit" class="btn text-white  btn-lg btn-block mr-5 ml-5 mt-3" [disabled]="frm.invalid">انشاء حساب</button>
+                        </div>
+                </form>
+        </div>
+</div>
+<div class="modal-footer text-center">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 col-lg-6 text-center">
+
+                <p class="mt-5 mb-4 ">التسجيل باستخدام</p>
+                <div class="text-center">
+                        <img src="assets/facebook.png">
+                        <img src="assets/twitter.png" class="ml-2 mr-2">
+                        <img src="assets/google.png">
+                </div>
+                <p  class="mt-4 pb-5"><a href="/login">يوجد لدي حساب</a></p>
+        </div>
+        <div class="col-sm-3"></div>
+
+</div>
+
+</ng-template>
+<!-- //login form -->
+<ng-template #content1 let-c="close" let-d="dismiss">
+                <div class="modal-header p-0">
+                <div class="head text-center  text-white ">تسجيل الدخول  </div>
+                <button type="button" class="close p-0 m-0 mr-1"  (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                
+                <div class="modal-body p-0">
+                        
+                        <div class="form-body">
+                
+                                <form action="" method="post" #frm="ngForm" (ngSubmit)="addUser(frm)">
+                                        <div class="form-row pt-5">
+                                        <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right"   name="" placeholder="البريد الالكتروني" required pattern="[a-zA-Z][a-zA-Z]+">
+                                        <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right"  name=""placeholder="الرقم السري" required pattern="[a-zA-Z][a-zA-Z]+">                                             
+                                        <button type="submit" class="btn text-white  btn-lg btn-block mr-5 ml-5 mt-3" [disabled]="frm.invalid">تسجيل الدخول</button>
+                                        </div>
+                                        <div class="form-check text-right  mr-5 mt-4 ">
+                                                <span class="pr-4">تذكرني</span>
+                                                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" >
+                                                <span class="float-left ml-5">نسيت كلمه المرور</span>
+                                        </div>
+                                </form>
+
+                        </div>
+                </div>
+                <div class="modal-footer text-center">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6 col-lg-6 text-center">
+                
+                                <p class="mt-5 mb-4 ">التسجيل باستخدام</p>
+                                <div class="text-center">
+                                        <img src="assets/facebook.png">
+                                        <img src="assets/twitter.png" class="ml-2 mr-2">
+                                        <img src="assets/google.png">
+                                </div>
+                                <p  class="mt-4 pb-5"><a href="/login">انشاء حساب جديد</a></p>
+                        </div>
+                        <div class="col-sm-3"></div>
+                
+                </div>
+                
+                </ng-template>
 </body>
 </html>
