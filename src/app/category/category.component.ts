@@ -15,15 +15,19 @@ export class CategoryComponent implements OnInit {
   {
     this.catigoryData = [];
     this.getCatigoryData();
+    console.log(this.catigoryData);
    }
 
    //services
   getCatigoryData(): void {
-    let path: string = ' ./assets/categoryData.json';
+    // let path: string = ' ./assets/categoryData.json';
+    let path: string = 'http://gholaf.com/selectbookdata.php';
     this.data.getData(path).subscribe(
       res => {
         this.catigoryData = res;
-        // console.log(res);
+        console.log(res);
+    console.log(this.catigoryData);
+        
       },
       err => {
         console.log(err);

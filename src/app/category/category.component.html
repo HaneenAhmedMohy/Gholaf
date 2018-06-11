@@ -5,11 +5,15 @@
       <div class="row" >
 
         <div class="col-sm-4 text-right mb-4" *ngFor=" let catigoryData of catigoryData">
-            <img src="{{catigoryData.src}}" class="img-fluid"/>
-            <p>
+            <img src="{{catigoryData.img}}" class="img-fluid"/>
+            <!-- <p>
                 <span class="float-left"> {{catigoryData.stars}} </span> <span class="float-right"> {{catigoryData.bookName}}</span>
-            </p>
-            <p class="text-right">{{catigoryData.author}}</p>
+            </p> -->
+            <p>
+              <span class="float-left"> {{catigoryData.num-downloads}} </span> <span class="float-right"> {{catigoryData.bookName}}</span>
+          </p>
+            <!-- <p class="text-right">{{catigoryData.author}}</p> -->
+            <p class="text-right">{{catigoryData.category}}</p>
 
         </div>
       </div>
