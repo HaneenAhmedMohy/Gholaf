@@ -35,7 +35,6 @@ import { HeaderComponent } from './header/header.component';
 import { BookComponent } from './book/book.component';
 import { AuthorComponent } from './author/author.component';
 import { CartComponent } from './cart/cart.component';
-<<<<<<< HEAD
 import { HeadComponent } from './head/head.component';
 import { SideComponent } from './side/side.component';
 import { ContentComponent } from './content/content.component';
@@ -45,11 +44,7 @@ import { MyOrderComponent } from './my-order/my-order.component';
 import { EditInfoComponent } from './edit-info/edit-info.component';
 import { FavouriteComponent } from './favourite/favourite.component';
 import { LogoutComponent } from './logout/logout.component';
-
-
-=======
 import { PaymentComponent } from './payment/payment.component';
->>>>>>> 8fa2a868ae74d76935753d44d68f507c29d95e61
 
 
 const routes: Routes =  [
@@ -64,23 +59,15 @@ const routes: Routes =  [
   { path: "cart", component: CartComponent },
   { path: "register", component: RegestComponent },
   { path: "category", component: CategoryComponent },
-<<<<<<< HEAD
   {path:'', component:FeaturedComponent } ,
 
   { path: "personal", component: PesonalInfoComponent },
   { path: "favourite", component: FavouriteComponent },
   { path: "myorder", component: MyOrderComponent },
   { path: "editinfo", component: EditInfoComponent },
-  { path: "logout", component:  HomeComponent }
-
-  
-
- 
-=======
-  {path:'', component:FeaturedComponent },
+  { path: "logout", component:  HomeComponent },
   {path:"payment",component:PaymentComponent} 
   // {path:'login',component:LoginComponent}
->>>>>>> 8fa2a868ae74d76935753d44d68f507c29d95e61
 ]
   
 @NgModule({
@@ -99,7 +86,6 @@ const routes: Routes =  [
     MostdownloadedComponent,
     NewestbooksComponent,
     HeaderComponent,
-<<<<<<< HEAD
     BookComponent,
     AuthorComponent,
     CartComponent,
@@ -111,11 +97,8 @@ const routes: Routes =  [
     MyOrderComponent,
     EditInfoComponent,
     FavouriteComponent,
-    LogoutComponent
-=======
-    CartComponent,
-    PaymentComponent
->>>>>>> 8fa2a868ae74d76935753d44d68f507c29d95e61
+    LogoutComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,
