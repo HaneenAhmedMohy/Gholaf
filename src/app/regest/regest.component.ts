@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./regest.component.css']
 })
 export class RegestComponent implements OnInit {
-
+ 
   constructor() { }
-
+ 
   ngOnInit() {
   }
 

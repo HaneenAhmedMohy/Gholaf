@@ -12,6 +12,11 @@
     font-size: 30px;
     width: 100%;
 }
+.alert,.divalert{
+    width: 100%;
+    font-family: 'Noto Naskh Arabic';
+
+}
 .form-body{
     background-color: #efefef;
     

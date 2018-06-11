@@ -9,12 +9,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
-
-
-
-
-
+import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
 
 
 // import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -37,8 +32,24 @@ import { FamousauthorsComponent } from './famousauthors/famousauthors.component'
 import { MostdownloadedComponent } from './mostdownloaded/mostdownloaded.component';
 import { NewestbooksComponent } from './newestbooks/newestbooks.component';
 import { HeaderComponent } from './header/header.component';
+import { BookComponent } from './book/book.component';
+import { AuthorComponent } from './author/author.component';
 import { CartComponent } from './cart/cart.component';
+<<<<<<< HEAD
+import { HeadComponent } from './head/head.component';
+import { SideComponent } from './side/side.component';
+import { ContentComponent } from './content/content.component';
+import { FootComponent } from './foot/foot.component';
+import { PesonalInfoComponent } from './pesonal-info/pesonal-info.component';
+import { MyOrderComponent } from './my-order/my-order.component';
+import { EditInfoComponent } from './edit-info/edit-info.component';
+import { FavouriteComponent } from './favourite/favourite.component';
+import { LogoutComponent } from './logout/logout.component';
+
+
+=======
 import { PaymentComponent } from './payment/payment.component';
+>>>>>>> 8fa2a868ae74d76935753d44d68f507c29d95e61
 
 
 const routes: Routes =  [
@@ -53,9 +64,23 @@ const routes: Routes =  [
   { path: "cart", component: CartComponent },
   { path: "register", component: RegestComponent },
   { path: "category", component: CategoryComponent },
+<<<<<<< HEAD
+  {path:'', component:FeaturedComponent } ,
+
+  { path: "personal", component: PesonalInfoComponent },
+  { path: "favourite", component: FavouriteComponent },
+  { path: "myorder", component: MyOrderComponent },
+  { path: "editinfo", component: EditInfoComponent },
+  { path: "logout", component:  HomeComponent }
+
+  
+
+ 
+=======
   {path:'', component:FeaturedComponent },
   {path:"payment",component:PaymentComponent} 
   // {path:'login',component:LoginComponent}
+>>>>>>> 8fa2a868ae74d76935753d44d68f507c29d95e61
 ]
   
 @NgModule({
@@ -74,25 +99,33 @@ const routes: Routes =  [
     MostdownloadedComponent,
     NewestbooksComponent,
     HeaderComponent,
+<<<<<<< HEAD
+    BookComponent,
+    AuthorComponent,
+    CartComponent,
+    HeadComponent,
+    SideComponent,
+    ContentComponent,
+    FootComponent,
+    PesonalInfoComponent,
+    MyOrderComponent,
+    EditInfoComponent,
+    FavouriteComponent,
+    LogoutComponent
+=======
     CartComponent,
     PaymentComponent
+>>>>>>> 8fa2a868ae74d76935753d44d68f507c29d95e61
   ],
   imports: [
-
-
     BrowserModule,
     RouterModule.forRoot(routes),
     NgbModule.forRoot(),
     HttpClientModule,
+    SweetAlert2Module.forRoot(),
     // AngularFontAwesomeModule,
     FormsModule,
     RouterModule,
-
-
-
-    
-    
-    
     // BsDropdownModule.forRoot(),
     // TooltipModule.forRoot(),
     // ModalModule.forRoot()
