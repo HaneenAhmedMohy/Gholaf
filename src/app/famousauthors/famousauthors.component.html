@@ -1,33 +1,33 @@
-
 <div class="container mb-5 section">
     <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-8" *ngFor="let popularauthor of popularauthor">
-        <div class="card mb-4">
-          <div class="image-container mb-3">
-            <div class="overlay">	
-              <i class="far fa-heart"></i>
-              <button><i class="fas fa-shopping-cart"></i></button>
-            </div>
-            <img class="card-img-top" src="{{popularauthor.img}}" class="img-fluid" alt="Card image cap">
-          </div>
-          <div class="card-body p-0"> 
-              <div class="rate">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <h5 class="card-title text-right">{{popularauthor.aname}} </h5>
-              <!-- <h6 class="text-right">احلام مستغانمى</h6> -->
-              <h6 class="text-right">{{popularauthor.numbooks}} </h6>
-          </div>
-              <div class="addToCart">
-                <i class="fas fa-shopping-cart mr-2"></i>
-                <i class="far fa-heart"></i>
-              </div>
-          </div>
-        
-      </div>
+        <div class="col-lg-3 col-md-6 col-sm-8" *ngFor="let popularauthor of popularauthor">
+            <div class="card mb-4">
+                <div class="image-container mb-3">
+                    <div class="overlay">	
+                        <i class="far fa-heart"></i>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                    <img class="card-img-top" src="{{popularauthor.img}}" class="img-fluid" alt="Card image cap">
+                </div>
+                <div class="card-body p-0"> 
+                    <div class="rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h5 class="card-title text-right">{{popularauthor.aname}} </h5>
+                    <div>
+                        <h6 class="text-right">احلام مستغانمى</h6>
+                        <h6 class="text-right info">{{popularauthor.numbooks}} </h6>
+                    </div>
+                    <div class="addToCart">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>  
+            </div>    
+        </div>
     </div>
-  </div>
+</div>

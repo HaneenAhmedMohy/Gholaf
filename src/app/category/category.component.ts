@@ -20,8 +20,7 @@ export class CategoryComponent implements OnInit {
 
    //services
   getCatigoryData(): void {
-    // let path: string = ' ./assets/categoryData.json';
-    let path: string = 'http://gholaf.com/selectbookdata.php';
+    let path: string = 'http://gholaf.com/categoryFiltration.php';
     this.data.getData(path).subscribe(
       res => {
         this.catigoryData = res;
