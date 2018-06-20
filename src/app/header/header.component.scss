@@ -9,9 +9,10 @@ header{
     vertical-align: middle; 
   
     
+    
 }
 .table{
-    height: 90vh;
+    height: 70vh;
     width: 70vw;
     display: table;
     text-align: center;
@@ -32,6 +33,10 @@ header h1{
 header p{
     font-family: paragrafs;
     font-size: 30px;
+    margin-bottom: 0px;
+}
+header h6{
+    margin-bottom: 40px;
 }
 input{
     border-bottom-left-radius: 0px;

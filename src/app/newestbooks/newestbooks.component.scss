@@ -8,7 +8,6 @@ h6{
 h5{
 	font-family:  paragrafs;
 	display: inline;
-    margin-left: 33px;
 }
 .card.mb-4{
 	border: none;
@@ -67,16 +66,19 @@ img{
 .card-body.p-0{
 	text-align:right;
 }
-.rate{
-	// display:inline-block;
+.info{
 	float:left;
+}
+.rate{
+	float:left;
+	font-size: 0.8rem;
 }
 .addToCart{
 	display:none;
 }
 @media (max-width: 992px){
  	.addToCart{
- 		// display:inline-block;
+ 		display:initial;
  		float:left;
  		color:#177777;
  		font-size:20px;
@@ -84,4 +86,7 @@ img{
  	.overlay{
  		display:none;
  	}
+ 	.image-container:hover img {
+	  	opacity: 1;
+	}
  }
