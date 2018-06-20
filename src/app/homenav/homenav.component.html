@@ -1,0 +1,122 @@
+<!-- <app-nav></app-nav> -->
+<nav class="navbar navbar-expand-lg  ">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fas fa-align-justify"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <form class="form-inline my-2 my-lg-0">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#cart" routerLink="/cart">  <i class="fas fa-shopping-cart"></i> <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                         <a class="nav-link" href="#regist" routerLink="/myaccount">  حسابي <span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                          <a class="nav-link" href="#contact" routerLink="contact"> اتصل بنا  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                          <a class="nav-link" href="#category" routerLink="/category"> التصنيفات <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                            <a class="nav-link" href="#homepage" routerLink=""> الصفحة الرئيسة <span class="sr-only">(current)</span></a>
+                    </li>
+                     
+            </ul>
+            </form>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
+            <!-- <a class="navbar-brand" href="#" id="logo">  غلاف   </a>   -->
+            <span class="navbar-brand" href="#" id="logo">  غلاف   </span>  
+</div>
+</div>
+</nav>
+
+<!-- header section -->
+
+<header class="text-white">
+    <div class="table animated flip">
+      <div class="cell">
+        <h1 class="animated infinite bounce"> غلاف </h1>
+        <p class="text-white">إذا شعرت وأنت تقلب الصفحة الأخيرة في الكتاب الذي تقرأه أنك فقدت صديقاً عزيزاً فأعلم أنك قد قرأت كتاباً رائعا</p>
+        <div class="col-sm-6 offset-md-3">
+            <div class="input-group rotateInDownLeft">
+              <div class="input-group-prepend border-0">
+                <span class="input-group-text pr-3 pl-3 text-white" id="" aria-label="Large">بحث 
+                </span>
+              </div>
+              <input type="text" class="form-control text-gray text-right" placeholder="يمكنك البحث باسم الكتاب او المؤلف">
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+
+  <!-- download section -->
+<section id="download" class=" pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 text-center text-white">
+                <p class="text-white">استمتع بالقراءة علي جهازك <br>اينما شئت</p>
+                <div class="mb-4">
+                    <button type="button" class="btn text-white  pl-4 pr-4">احصل علي غلاف من متجر ابل<a class="text-white" href="https://www.apple.com/lae/ios/app-store/"></a></button>
+                </div>
+                <div class="pb-4">
+                    <button type="button" class="btn text-white "><a class="text-white" href="https://play.google.com/store/apps?hl=en">احصل علي غلاف من متجر اندرويد</a></button>
+                </div>
+
+             </div>
+             <div class="col-sm-6">
+               <img src="assets/mobile.png" alt="Card image cap" class="img-fluid mobile"/>
+             </div>
+        </div>
+    </div>   
+</section>
+
+<!-- upload section -->
+
+  <section id="upload-file" class=" pb-5 mb-5">
+      <div class="upload-content-box">
+          <div class="upload-content-box-inner">
+              <h1 class="text-black "> اذا كنت من محبي الكتابة يمكنك الان<br> مشاركة كتاباتك علي موقع غلاف</h1>
+              <span class="">قم برفع كتابك ثم انتظر تواصلنا معك </span>
+              <div class="upload-btn mt-3 p-3">
+                  <button type="button" class="btn" (click)="open(content)"> رفع الملف <i class="fas fa-upload pl-2"></i></button>
+
+              </div>
+
+          </div>
+      </div>
+</section>
+
+<ng-template #content let-c="close" let-d="dismiss">
+<div class="modal-header">
+  <h4 class="modal-title"></h4>
+  <button type="button" class="close text-left" aria-label="Close" (click)="d('Cross click')">
+    <span aria-hidden="true" class="text-white ">&times;</span>
+  </button>  
+</div>
+  
+<div class="modal-body">
+  <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="float-right email">بريدك الالكتروني</label>
+          <input type="email" class="form-control text-right" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="البريد الالكتروني">
+          <!-- <input type="file" class="form-control text-right" id="exampleInputEmail1" aria-describedby="emailHelp" > -->
+        </div>
+        <div class="form-group text-right">
+            <!-- <label for="exampleInputEmail1" class="float-right email">بريدك الالكتروني</label> -->
+            <!-- <input type="email" class="form-control text-right" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="البريد الالكتروني"> -->
+            <input type="file" class="form-control text-right" id="exampleInputEmail1" aria-describedby="emailHelp" >
+          </div>
+       
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn pl-4 pr-4 text-white" (click)="c('Close click')">تاكيد </button>
+</div>
+</ng-template>
+<app-team></app-team>
+<app-footer></app-footer>

@@ -6,10 +6,11 @@
         <div class="card mb-4">
           <div class="image-container mb-3">
             <div class="overlay">	
-              <i class="far fa-heart"></i>
-              <button><i class="fas fa-shopping-cart"></i></button>
+              <i [swal]="[ 'يجب عليك تسجيل الدخول اولا ']" class="far fa-heart"></i>
+              <button [swal]="[ 'يجب عليك تسجيل الدخول اولا ']"><i class="fas fa-shopping-cart"></i></button>
             </div>
-            <img class="card-img-top" src="{{newest.img}}" class="img-fluid" alt="Card image cap">
+            
+            <a routerLink="/author"><img class="card-img-top" src="{{newest.img}}" class="img-fluid" alt="Card image cap"></a>
           </div>
           <div class="card-body p-0"> 
             <div class="rate">
@@ -20,14 +21,11 @@
               <i class="far fa-star"></i>
             </div>
               <h5 class="card-title text-right">{{newest.bname}} </h5>
+              <h6 class="text-right float-right">{{newest.datepublish}} </h6>
               <h6 class="text-right">احلام مستغانمى</h6>
-              <h6 class="text-right">{{newest.datepublish}} </h6>
           </div>
-              <div class="addToCart">
-                <i class="fas fa-shopping-cart mr-2"></i>
-                <i class="far fa-heart"></i>
-              </div>
-          </div>
+              
+        </div>
         
       </div>
     </div>

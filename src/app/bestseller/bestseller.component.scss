@@ -43,6 +43,8 @@ img{
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	text-align: center;
+	z-index: 1000;
+
 }
 .image-container:hover img {
   opacity: 0.3;
@@ -58,8 +60,11 @@ button{
     background-color:#177777;
     color:white;
     height:60px;
-    font-size:30px;
+	font-size:30px;
+	z-index:2000;
+
 }
+
 img{
 	height:350px;
 }

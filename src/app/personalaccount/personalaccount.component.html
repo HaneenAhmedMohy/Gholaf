@@ -1,0 +1,150 @@
+
+
+<nav class="navbar navbar-expand-lg  ">
+  <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fas fa-align-justify"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <form class="form-inline my-2 my-lg-0">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#cart" routerLink="/cart">  <i class="fas fa-shopping-cart"></i> <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                       <a class="nav-link" href="#regist" routerLink="/myaccount">  حسابي <span class="sr-only">(current)</span></a>
+                  </li>
+                  
+                  <li class="nav-item active">
+                        <a class="nav-link" href="#contact" routerLink="contact"> اتصل بنا  <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                        <a class="nav-link" href="#category" routerLink="/category"> التصنيفات <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                          <a class="nav-link" href="#homepage" routerLink=""> الصفحة الرئيسة <span class="sr-only">(current)</span></a>
+                  </li>
+                   
+          </ul>
+          </form>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
+          <span class="navbar-brand" href="#" id="logo">  غلاف   </span>  
+</div>
+</div>
+</nav>
+<div class="container2 mt-5">
+<ngb-tabset class="text-right" [justify]="currentJustify">
+  <ngb-tab title="المفضلات" class="ngb">
+    <ng-template ngbTabContent>
+        <div class="row mt-4">
+            <div class="col-sm-4 text-right mb-4   text-center">
+               <img src="assets/3.jpg" class="img-fluid"/>
+               <p class="mt-2 mb-0">
+                   <span class="">
+                       <i class="fas fa-star text-warning"></i>
+                       <i class="fas fa-star text-warning"></i>
+                       <i class="fas fa-star text-warning"></i>
+                       <i class="fas fa-star text-warning"></i>
+                       <i class="far fa-star text-warning"></i>
+                   </span>
+                   <span class=" bookname"> انا حره</span>
+               </p>
+               <p class="">احسان عبد القدوس</p>
+    
+           </div>
+           <div class="col-sm-4 text-right mb-4 text-center">
+              <img src="assets/2.jpg" class="img-fluid"/>
+              <p م class="mt-2 mb-0">
+                  <span class="">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="far fa-star text-warning"></i>
+                  </span>
+                  <span class="bookname"> انا حره</span>
+              </p>
+              <p class="">احسان عبد القدوس</p>
+    
+          </div>
+          <div class="col-sm-4 text-right mb-4 text-center">
+                <img src="assets/3.jpg" class="img-fluid"/>
+                <p م class="mt-2 mb-0">
+                    <span class="">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                    </span>
+                    <span class="bookname"> انا حره</span>
+                </p>
+                <p class="">احسان عبد القدوس</p>
+      
+            </div>
+        </div>          
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="الطلبات" class="ngb">
+    <ng-template ngbTabContent>
+
+      <section style="overflow-x:auto;" class="order mt-5">
+
+          <table class="text-center">
+              <thead>
+                  <tr class="text-center">
+                    <th class="text-center"> الحاله </th>
+                    <th> ميعاد التوصيل  </th>
+                    <th> الكمية </th>
+                    <th>السعر</th>
+                    <th> الكتاب </th>
+                  </tr>
+                  </thead>
+                  <tbody >
+                      <tr>
+                        <td>لم يصل بعد</td>
+                        <td> 31/3/2018</td>
+                        <td> 2</td>
+                        <td> 30$</td>
+                        <td>شجره في اناء</td>
+
+                      </tr>
+                      <tr>
+                          <td>لم يصل بعد</td>
+                          <td> 5/4/2018</td>
+                          <td> 1</td>
+                          <td> 15$</td>
+                          <td> عقل بلا جسد </td>
+        
+                        </tr>
+                    
+                      </tbody>
+          </table>
+            
+        </section>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="البيانات الشخصيه" class="ngb">
+    <ng-template ngbTabContent>
+        <div class="container">
+            <div class="row mr-0">
+              <div class="col-sm-3"></div>
+              <div class="col-sm-9 mt-3 ">
+                  <div class="data">
+                    <div class="mb-3 mt-2"><span class="font-weight-bold"> الاسم : </span><span>يوسيتنا مصطفي</span></div>
+                    <div class="mb-3"><span>Yostenia Mostafa @gmail.com :</span><span  class="font-weight-bold"> الايميل</span></div>
+                    <div class="mb-3"><span class="font-weight-bold">رقم التليفون :</span><span>01115774098</span></div>
+                    <div  class="mb-3"><span class="font-weight-bold"> العنوان :</span><span>شارع عباس العقاد مدينه نصر القاهره</span></div>
+                    <span>.......</span><span class="font-weight-bold"> : الرقم السري </span><br>
+          
+                  </div>
+                  <button type="button" class="btn text-white float-right btn-lg mr-0  mt-4 mb-5 p-0 p-1 pl-2 pr-2 "><a routerLink="/editinfo">تعديل</a></button>
+          
+                </div>
+            </div>
+          </div>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>
+</div>
+<app-footer></app-footer>

@@ -1,74 +1,88 @@
-
+ <app-nav></app-nav>
 
 <div class="container">
-  <div class="row">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-5 col-lg-6 text-center">
-          <div class="head text-center pt-2 pb-2 text-white ">انشاء حساب </div>
-          <div class="form-body">
-              <form action="" method="post" #frm="ngForm" (ngSubmit)="addUser(frm)">
-                <div class="form-row pt-5">
-                    <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right" ngModel #firstName="ngModel"  name="firstname" placeholder="الاسم الاول" required pattern="[a-zA-Z][a-zA-Z]+">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-5 col-lg-6 text-center">
+            <div class="head text-center pt-2 pb-2 text-white ">انشاء حساب </div>
+            <div class="form-body">
+                <form name="frm" #frm="ngForm" (ngSubmit)="adduser(frm)">
+                    <div class="form-row pt-5">
+                        <input type="text" [(ngModel)]="dataForm.firstname" #firstname="ngModel" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right"
+                            name="firstname" placeholder="الاسم الاول" required pattern="[a-zA-Z][a-zA-Z]+">
 
-                        <div  *ngIf="firstName.touched"  class="ml-5 mr-5 divalert">
-                            <div *ngIf="firstName.errors?.required" class="alert alert-danger text-right">
+                        <div *ngIf="firstname.touched" class="ml-5 mr-5 divalert">
+                            <div *ngIf="firstname.errors?.required" class="alert alert-danger text-right">
                                 يجب عليك ادخال اسمك الاول
                             </div>
-                            <div *ngIf="firstName.errors?.pattern" class="alert alert-danger text-right ">
-                                اسمك الاول لابد ان يحتوي فقط علي حروف 
+                            <div *ngIf="firstname.errors?.pattern" class="alert alert-danger text-right ">
+                                اسمك الاول لابد ان يحتوي فقط علي حروف
                             </div>
                         </div>
 
-                    <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right" ngModel  #lastName="ngModel" name="lastname"placeholder="الاسم الثاني" required pattern="[a-zA-Z][a-zA-Z]+">
-                        <div  *ngIf="lastName.touched"  class="ml-5 mr-5 divalert">
-                            <div *ngIf="lastName.errors?.required" class=" alert alert-danger text-right">
+                        <input type="text" [(ngModel)]="dataForm.lastname" #lastname="ngModel" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right"
+                            name="lastname" placeholder="الاسم الثاني" required pattern="[a-zA-Z][a-zA-Z]+">
+                        <div *ngIf="lastname.touched" class="ml-5 mr-5 divalert">
+                            <div *ngIf="lastname.errors?.required" class=" alert alert-danger text-right">
                                 يجب عليك ادخال اسمك الاخير
                             </div>
-                            <div *ngIf="lastName.errors?.pattern" class="alert alert-danger text-right">
-                                اسمك الاخير لابد ان يحتوي فقط علي حروف 
+                            <div *ngIf="lastname.errors?.pattern" class="alert alert-danger text-right">
+                                اسمك الاخير لابد ان يحتوي فقط علي حروف
                             </div>
                         </div>
 
-                    <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right" ngModel  #Email="ngModel" name="email" placeholder="البريد الالكتروني"required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
-                        <div  *ngIf="Email.touched"  class=" ml-5 mr-5 divalert">
-                            <div *ngIf="Email.errors?.required" class="alert alert-danger text-right">
+                        <input type="text" [(ngModel)]="dataForm.email" #email="ngModel" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right"
+                            name="email" placeholder="البريد الالكتروني" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                        <div *ngIf="email.touched" class=" ml-5 mr-5 divalert">
+                            <div *ngIf="email.errors?.required" class="alert alert-danger text-right">
                                 يجب عليك ادخال بريدك الالكتروني
                             </div>
-                            <div *ngIf="Email.errors?.pattern" class="alert alert-danger text-right ">
-                                 يجب عليك ادخال بريدك الالكتروني بشكل صحيح 
+                            <div *ngIf="email.errors?.pattern" class="alert alert-danger text-right ">
+                                يجب عليك ادخال بريدك الالكتروني بشكل صحيح
                             </div>
                         </div>
-                    <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right" ngModel  #password="ngModel" type="password" name="pass" placeholder="كلمه المرور" required>
-                        <div  *ngIf="password.touched"  class=" ml-5 mr-5 divalert">
+                        <input type="text" [(ngModel)]="dataForm.password" #password="ngModel" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right"
+                            type="password" name="password" placeholder="كلمه المرور" required>
+                        <div *ngIf="password.touched" class=" ml-5 mr-5 divalert">
                             <div *ngIf="password.errors?.required" class=" alert alert-danger text-right">
                                 يجب عليك ادخال رقمك السري
                             </div>
-                        </div>
-                    <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right"ngModel   #confirm="ngModel" type="password" name="confirmpass" placeholder="تاكيد كلمه المرور" required>
 
-                        <div  *ngIf="confirm.touched"  class="ml-5 mr-5 divalert">
-                            <div *ngIf="confirm.errors?.required" class=" alert alert-danger text-right">
+                        </div>
+                        <input type="text" appCompareValidator="password" [(ngModel)]="dataForm.confirmpassword" #confirmpassword="ngModel" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right"
+                            type="password" name="confirmpassword" placeholder="تاكيد كلمه المرور" required compare="password">
+
+                        <div *ngIf="confirmpassword.touched" class="ml-5 mr-5 divalert">
+                            <div *ngIf="confirmpassword.errors?.required" class=" alert alert-danger text-right">
                                 يجب عليك ادخال تاكيد الرقم السري
+                            </div>
+
+                            <div class="help-block" *ngIf="confirmpassword .errors?.notEqual" class=" alert alert-danger text-right">
+                                عفوا لقد تم ادخال كلمه مرور مختلفه
                             </div>
                         </div>
 
-                    <button [swal]="['OK', '   تم بنجاج انشاء حساب', 'success']" type="submit" class="btn text-white  btn-lg btn-block mr-5 ml-5 mt-3" [disabled]="frm.invalid">انشاء حساب</button>
+                        <button [disabled]="frm.invalid" type="submit" class="btn text-white  btn-lg btn-block mr-5 ml-5 mt-3">انشاء حساب</button>
+                    </div>
+                </form>
+                <p class="mt-5">التسجيل باستخدام</p>
+                <div class="text-center">
+                    <img src="assets/facebook.png">
+                    <img src="assets/twitter.png" class="ml-2 mr-2">
+                    <img src="assets/google.png">
                 </div>
-              </form>
-              <p class="mt-5">التسجيل باستخدام</p>
-              <div class="text-center">
-                  <img src="assets/facebook.png">
-                  <img src="assets/twitter.png" class="ml-2 mr-2">
-                  <img src="assets/google.png">
-              </div>
-              <p  class="mt-4 pb-5"><a href="/login">يوجد لدي حساب</a></p>
+                <p class="mt-4 pb-5">
+                    <a href="/login">يوجد لدي حساب</a>
+                </p>
 
-          </div>
-      </div>
-      <div class="col-sm-3"></div>
-  </div>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
 </div>
-{{frm.value | json}} 
+ <app-footer></app-footer> 
 
 
+<!-- {{frm.value | json}}  -->
 
+<!-- <li *ngFor="let user of userList">{{user}}</li> -->

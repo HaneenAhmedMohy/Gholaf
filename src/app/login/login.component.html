@@ -1,18 +1,29 @@
+ <app-nav></app-nav>
+
 <section class=""></section>
 <div class="container">
     <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-sm-6 col-md-6 col-lg-6 text-center ">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 col-lg-6 text-center ">
             <div class="head text-center pt-2 pb-2 text-white ">تسجيل الدخول </div>
             <div class="form-body">
-                <form >
-                  <div class="form-row pt-5">
+                <form name="frm" #frm="ngForm" (ngSubmit)="login(frm)" novalidate>
+                  <div class="form-row pt-5" >
                      
-                      <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right" placeholder="البريد الالكتروني">
-                      <input type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right" placeholder="كلمه المرور" required>
+                      <input type="email" name="email" #email required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" type="text" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right" placeholder="البريد الالكتروني">
+                      <div *ngIf="email.touched" class=" ml-5 mr-5 divalert">
+                            <div *ngIf="email.errors?.required" class="alert alert-danger text-right">
+                                يجب عليك ادخال بريدك الالكتروني
+                            </div>
+                            <div *ngIf="email.errors?.pattern" class="alert alert-danger text-right ">
+                                يجب عليك ادخال بريدك الالكتروني بشكل صحيح
+                            </div>
+                        </div>
+
+                      <input [(ngModel)]="password" name="password"  type="password" class="form-control bg-transparent mb-4 mr-5 ml-5 text-right" placeholder="كلمه المرور" required>
                      
 
-                      <button type="button" class="btn text-white  btn-lg btn-block mr-5 ml-5 mt-3">تسجيل الدخول </button>
+                      <button  [disabled]="frm.invalid" type="submit" class="btn text-white  btn-lg btn-block mr-5 ml-5 mt-3"><a routerLink="/homenav" class="text-white">تسجيل الدخول</a></button>
                   </div>
                     <div class="form-check text-right  mr-5 mt-4 ">
                       <span class="pr-4">تذكرني</span>
@@ -34,3 +45,4 @@
         <div class="col-lg-3"></div>
     </div>
 </div>
+ <app-footer></app-footer> 

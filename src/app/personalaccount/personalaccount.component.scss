@@ -1,0 +1,129 @@
+// nav css
+
+nav{
+    i{
+        color: white;
+    }
+    background-color: #533a4f;
+    .navbar-brand{
+        font-family: Alfarooq-Regular;
+        color: white;
+        font-family: Abdo Logo;
+        font-size: 30px;
+        margin-right: 0px;
+    }
+    
+    a{
+        font-family: Noto Naskh Arabic;
+        color: white;
+        
+    }
+
+    a:hover ,a:focus{
+        color: #177777;
+    }
+    
+    .compactive{
+        color: white;
+    }
+}
+
+
+.head{
+    background-color: #533a4f;
+    font-family: 'Abdo Logo';
+    font-size: 30px;
+    width: 100%;
+}
+.close{
+    background-color: #533a4f;
+}
+.alert,.divalert{
+    width: 100%;
+    font-family: 'Noto Naskh Arabic';
+
+}
+.form-body{
+    background-color: #efefef;
+    
+}
+.modal-footer{
+    background-color: #efefef; 
+}
+button{
+    background-color: #187676;
+    font-family: 'Noto Naskh Arabic';
+}
+
+input{
+    font-family: 'Noto Naskh Arabic';
+    border:1px solid #187676;
+}
+.form-body{
+    background-color: #efefef;
+    
+}
+
+p,span{
+    color:#187676;
+    font-family: 'Noto Naskh Arabic';
+}
+
+// my account css
+ a{
+    color:#187676;
+    font-family: 'Noto Naskh Arabic';
+}
+.container2{
+    width:60%;
+    margin: 0 auto;
+}
+
+button a{
+    color:white;
+    font-family: 'Noto Naskh Arabic';
+}
+
+
+table { 
+    width: 100%; 
+    border-collapse: collapse;
+    margin:0 auto;
+    
+  }
+ 
+  tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  th { 
+    background-color: #533a4f;
+    color: white; 
+    font-size: 20px;
+    font-weight: 100; 
+    font-family: subtitle;
+  }
+  tbody td{
+    background-color: white;
+  }
+  td, th { 
+    padding: 6px; 
+    text-align: center; 
+  
+  }
+  td{
+      font-family: paragrafs;
+      padding: 20px;
+  }
+
+  span i{
+    font-size: 8px;
+}
+span,p,ngb-tabset{
+    font-family: 'Noto Naskh Arabic';
+
+}
+span{
+    font-weight: bold;
+}
+
+

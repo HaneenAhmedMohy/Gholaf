@@ -22,22 +22,22 @@
                 <form class="form-inline my-2 my-lg-0">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#contact" routerLink="/cart">  <i class="fas fa-shopping-cart"></i> <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#cart" routerLink="/cart">  <i class="fas fa-shopping-cart"></i> <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                             <a class="nav-link"  (click)="open(content)"> انشاء حساب <span class="sr-only">(current)</span></a>
+                             <a class="nav-link" href="#regist" routerLink="/register"> انشاء حساب <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                              <a class="nav-link" (click)="openlogin(content1)"> تسجيل الدخول <span class="sr-only">(current)</span></a>
+                              <a class="nav-link" href="#login" routerLink="/login"> تسجيل الدخول <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
                               <a class="nav-link" href="#contact" routerLink="contact"> اتصل بنا  <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                              <a class="nav-link" href="#" routerLink="/category"> التصنيفات <span class="sr-only">(current)</span></a>
+                              <a class="nav-link" href="#category" routerLink="/category"> التصنيفات <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                                <a class="nav-link" href="#" routerLink=""> الصفحةالرئيسة <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="#homepage" routerLink=""> الصفحة الرئيسة <span class="sr-only">(current)</span></a>
                         </li>  
                 </ul>
                 </form>
@@ -50,10 +50,10 @@
 <!-- End Nav Section -->
 
 <!-- Registration Form -->
-
+<!-- 
 <ng-template #content let-c="close" let-d="dismiss">
 <div class="modal-header p-0">
-<div class="head text-center  text-white ">انشاء حساب </div>
+<div class="head text-center   ">انشاء حساب </div>
 <button type="button" class="close p-0 m-0 mr-1"  (click)="d('Cross click')">
 <span aria-hidden="true">&times;</span>
 </button>
@@ -130,9 +130,10 @@
 
 </div>
 
-</ng-template>
+</ng-template> -->
+
 <!-- //login form -->
-<ng-template #content1 let-c="close" let-d="dismiss">
+<!-- <ng-template #content1 let-c="close" let-d="dismiss">
                 <div class="modal-header p-0">
                 <div class="head text-center  text-white ">تسجيل الدخول  </div>
                 <button type="button" class="close p-0 m-0 mr-1"  (click)="d('Cross click')">
@@ -169,12 +170,12 @@
                                         <img src="assets/twitter.png" class="ml-2 mr-2">
                                         <img src="assets/google.png">
                                 </div>
-                                <p  class="mt-4 pb-5"><a href="/login">انشاء حساب جديد</a></p>
+                                <p  class="mt-4 pb-5"><a href="/register">انشاء حساب جديد</a></p>
                         </div>
                         <div class="col-sm-3"></div>
                 
                 </div>
                 
-                </ng-template>
+                </ng-template> -->
 </body>
 </html>

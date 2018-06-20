@@ -1,0 +1,212 @@
+// nav css
+
+nav{
+    i{
+        color: white;
+    }
+    background-color: #533a4f;
+    .navbar-brand{
+        font-family: Alfarooq-Regular;
+        color: white;
+        font-family: Abdo Logo;
+        font-size: 30px;
+        margin-right: 0px;
+    }
+    
+    a{
+        font-family: Noto Naskh Arabic;
+        color: white;
+        
+    }
+
+    a:hover ,a:focus{
+        color: #177777;
+    }
+    
+    .compactive{
+        color: white;
+    }
+}
+
+
+.head{
+    background-color: #533a4f;
+    font-family: 'Abdo Logo';
+    font-size: 30px;
+    width: 100%;
+}
+.close{
+    background-color: #533a4f;
+}
+.alert,.divalert{
+    width: 100%;
+    font-family: 'Noto Naskh Arabic';
+
+}
+.form-body{
+    background-color: #efefef;
+    
+}
+.modal-footer{
+    background-color: #efefef; 
+}
+button{
+    background-color: #187676;
+    font-family: 'Noto Naskh Arabic';
+}
+
+input{
+    font-family: 'Noto Naskh Arabic';
+    border:1px solid #187676;
+}
+.form-body{
+    background-color: #efefef;
+    
+}
+
+p,span{
+    color:#187676;
+    font-family: 'Noto Naskh Arabic';
+}
+
+// header css
+header{
+    height: 95vh;
+    /* width: 100vw; */
+    /* width: calc(100vw - 17px); */
+    background-image: url("/assets/header.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    vertical-align: middle; 
+  
+    
+}
+.table{
+    height: 90vh;
+    width: 70vw;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    margin:0 auto;
+}
+
+
+.cell{
+display: table-cell;
+vertical-align: middle;
+}
+header h1{
+  font-family:title;
+  font-weight: bold;
+  font-size:170px; 
+}
+header p{
+    font-family: paragrafs;
+    font-size: 30px;
+}
+
+
+p,input,.input-group-text{
+    font-family:'Noto Naskh Arabic';
+    font-size: 20px;
+  }
+  .input-group-text,.input-group-prepend{
+      background-color: #187676;
+      border: 0;
+  } 
+  .input-group-prepend{
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+
+  }
+
+  @media (max-width: 570px) {
+    header {
+        padding: 50px 0px;
+        h1{
+            font-size: 100px;
+        }
+        p{
+            font-size: 20px;
+        }
+        input{
+            font-size: 10px;
+        }
+    }
+}
+
+img.mobile{
+    width: 400px;
+    position: absolute;
+    top: -50%;
+    /* bottom: 0%; */
+}
+
+
+#download{
+    background-color: #533a4f;
+    /* position: relative; */
+    margin-top: 100px;
+}
+p{
+    font-family: 'Abdo Logo';
+    font-size: 30px;
+}
+button{
+    background-color: #187676;
+    font-family: 'Noto Naskh Arabic';
+}
+//upload section
+#upload-file{
+    background-color: #f7f7f7;
+    padding-top: 100px;
+}
+.upload-content-box{
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+.upload-content-box-inner{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.upload-content-box-inner h1{
+  animation-delay:.5s;
+  animation-duration:.5s;
+  font-family: 'Abdo Logo';
+  font-weight: bold;
+  font-size: 35px;
+
+}
+.upload-content-box-inner span{
+    font-family: 'Noto Naskh Arabic';
+    color: grey;
+    font-weight: bold;
+    
+}
+ .upload-btn button{
+    background-color: #187676;
+     color: white;
+     font-family: 'Noto Naskh Arabic';
+     font-weight: bold;
+     
+}
+.modal-header{
+    background-color: #533a4f;
+}
+.email,.modal-footer button,input{
+    font-family: 'Noto Naskh Arabic'; 
+    float:right;
+}
+.modal-footer button{
+    background-color: #187676;
+
+}
+
+@media (max-width: 570px) {
+    .img-fluid {
+        display: none;
+    }
+}

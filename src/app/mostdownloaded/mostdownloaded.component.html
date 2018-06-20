@@ -7,8 +7,8 @@
         <div class="card mb-4">
           <div class="image-container mb-3">
             <div class="overlay">	
-              <i class="far fa-heart"></i>
-              <button><i class="fas fa-shopping-cart"></i></button>
+              <i  [swal]="[ 'يجب عليك تسجيل الدخول اولا ']"  class="far fa-heart"></i>
+              <button [swal]="[ 'يجب عليك تسجيل الدخول اولا ']"><i class="fas fa-shopping-cart"></i></button>
             </div>
             <img class="card-img-top" src="{{mostdownloaded.img}}" class="img-fluid" alt="Card image cap">
           </div>

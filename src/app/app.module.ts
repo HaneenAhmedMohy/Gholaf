@@ -1,5 +1,3 @@
-//fontawesome
-// import { AngularFontAwesomeModule } from 'angular-font-awesome';
 //services
 import { HttpClientModule } from '@angular/common/http';
 //App Module
@@ -10,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
+import {NgForm}  from '@angular/forms';
 
 
 // import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -17,6 +16,7 @@ import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
 // import { ModalModule } from 'ngx-bootstrap/modal';
 
 import {  FservService } from './fserv.service';
+// import {  InsertService } from './insert.service';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -35,16 +35,15 @@ import { HeaderComponent } from './header/header.component';
 import { BookComponent } from './book/book.component';
 import { AuthorComponent } from './author/author.component';
 import { CartComponent } from './cart/cart.component';
-import { HeadComponent } from './head/head.component';
 import { SideComponent } from './side/side.component';
-import { ContentComponent } from './content/content.component';
-import { FootComponent } from './foot/foot.component';
-import { PesonalInfoComponent } from './pesonal-info/pesonal-info.component';
-import { MyOrderComponent } from './my-order/my-order.component';
 import { EditInfoComponent } from './edit-info/edit-info.component';
-import { FavouriteComponent } from './favourite/favourite.component';
 import { LogoutComponent } from './logout/logout.component';
 import { PaymentComponent } from './payment/payment.component';
+//directive
+import { CompareValidatorDirective } from './shared/compare-validator.directive';
+import { HomenavComponent } from './homenav/homenav.component';
+import { PersonalaccountComponent } from './personalaccount/personalaccount.component';
+// import { HomenavComponent } from './homenav/homenav.component';
 
 
 const routes: Routes =  [
@@ -55,19 +54,30 @@ const routes: Routes =  [
     {path:'mostdownloaded', component:MostdownloadedComponent},
     {path:'famousauthors' , component:FamousauthorsComponent}
   ]},
+  // { path: "myaccount", component: MyaccountComponent,children:[
+  //   {path:'favourite',component:FavouriteComponent},
+  //   {path:'myorder' , component:MyOrderComponent},
+  //   {path:'info', component:PesonalInfoComponent},
+  // ]},
   { path: "login", component: LoginComponent },
   { path: "cart", component: CartComponent },
   { path: "register", component: RegestComponent },
   { path: "category", component: CategoryComponent },
   {path:'', component:FeaturedComponent } ,
 
-  { path: "personal", component: PesonalInfoComponent },
-  { path: "favourite", component: FavouriteComponent },
-  { path: "myorder", component: MyOrderComponent },
-  { path: "editinfo", component: EditInfoComponent },
-  { path: "logout", component:  HomeComponent },
-  {path:"payment",component:PaymentComponent} 
-  // {path:'login',component:LoginComponent}
+  // { path: "personal", component: PesonalInfoComponent },
+  // { path: "favourite", component: FavouriteComponent },
+  // { path: "myorder", component: MyOrderComponent },
+  // { path: "editinfo", component: EditInfoComponent },
+  // { path: "logout", component:  HomeComponent },
+  {path:"payment",component:PaymentComponent},
+  {path:"author",component:AuthorComponent},
+  {path:"book",component:BookComponent},
+  {path:"homenav",component:HomenavComponent},
+  {path:"myaccount",component:PersonalaccountComponent},
+  
+  
+  
 ]
   
 @NgModule({
@@ -89,16 +99,14 @@ const routes: Routes =  [
     BookComponent,
     AuthorComponent,
     CartComponent,
-    HeadComponent,
     SideComponent,
-    ContentComponent,
-    FootComponent,
-    PesonalInfoComponent,
-    MyOrderComponent,
     EditInfoComponent,
-    FavouriteComponent,
     LogoutComponent,
     PaymentComponent,
+    CompareValidatorDirective,
+    HomenavComponent,
+    PersonalaccountComponent,
+    // HomenavComponent,
   ],
   imports: [
     BrowserModule,
