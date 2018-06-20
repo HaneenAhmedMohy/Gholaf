@@ -105,8 +105,24 @@ header p{
     font-family: paragrafs;
     font-size: 30px;
 }
-
-
+header h6{
+    margin-bottom: 40px;
+}
+input{
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.input-group-prepend{
+    width: 100%;
+}
+.submit{
+    position: static;
+    width: 100px;
+    text-align: center;
+}
+.submit:hover{
+    cursor: pointer;
+}
 p,input,.input-group-text{
     font-family:'Noto Naskh Arabic';
     font-size: 20px;
@@ -135,6 +151,7 @@ p,input,.input-group-text{
         }
     }
 }
+
 
 img.mobile{
     width: 400px;

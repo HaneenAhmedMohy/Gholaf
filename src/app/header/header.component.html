@@ -2,18 +2,61 @@
 <app-nav></app-nav>
 <header class="text-white">
     <div class="table animated flip">
-      <div class="cell">
-        <h1 class="animated infinite bounce"> غلاف </h1>
-        <p>إذا شعرت وأنت تقلب الصفحة الأخيرة في الكتاب الذي تقرأه أنك فقدت صديقاً عزيزاً فأعلم أنك قد قرأت كتاباً رائعا</p>
-        <div class="col-sm-6 offset-md-3">
-            <div class="input-group rotateInDownLeft">
-              <div class="input-group-prepend border-0">
-                <span class="input-group-text pr-3 pl-3 text-white" id="" aria-label="Large">بحث 
-                </span>
-              </div>
-              <input type="text" class="form-control text-gray text-right" placeholder="يمكنك البحث باسم الكتاب او المؤلف">
+        <div class="cell">
+            <h1 class="animated infinite bounce"> غلاف </h1>
+            <p>إذا شعرت وأنت تقلب الصفحة الأخيرة في الكتاب الذي تقرأه أنك فقدت صديقاً عزيزاً فأعلم أنك قد قرأت كتاباً رائعا</p>
+            <h6>بول سوينى  </h6>
+            <div class="col-sm-6 offset-md-3">
+                <form name="search" #search="ngForm" >
+                  <div class="input-group rotateInDownLeft">
+                        <div class="input-group-prepend border-0 ">
+                                <!-- routerLink="/search" -->
+                            <button (click)="submitData(dataInput.value)" 
+                            type="submit" class="input-group-text pr-3 pl-4 text-white submit" id="search" aria-label="Large" >بحث 
+                        </button>
+                            <input type="text" name="search_input" #dataInput class="form-control text-gray text-right" placeholder="يمكنك البحث باسم الكتاب او المؤلف">
+                        </div>
+                  </div>
+                  </form>          
             </div>
         </div>
-      </div>
     </div>
-  </header>
+</header>
+<section id="search">
+<div class="container my-5 section">
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-8" *ngFor="let searchResult of searchResult">
+      <div class="card mb-4">
+        <div class="image-container mb-3">
+          <div class="overlay">	
+            <i class="far fa-heart"></i>
+            <button><i class="fas fa-shopping-cart"></i></button>
+          </div>
+          <img class="card-img-top" src="{{searchResult.img}}" class="img-fluid" alt="Card image cap">
+        </div>
+        <div class="card-body p-0"> 
+            <div class="rate">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <h5 class="card-title text-right">{{searchResult.bname}} </h5>
+            <div>
+                    <h6 class="text-right"> {{searchResult.aname}} </h6>
+                    <h6 class="text-right float-left">{{searchResult.datepublish}} </h6>
+            </div>
+           
+        </div>
+            <div class="addToCart">
+              <i class="fas fa-shopping-cart mr-2"></i>
+              <i class="far fa-heart"></i>
+            </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</section> 

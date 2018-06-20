@@ -118,8 +118,15 @@ table {
   span i{
     font-size: 8px;
 }
-span,p,ngb-tabset{
+span,p{
     font-family: 'Noto Naskh Arabic';
+}
+ngb-tabset{
+    font-family: subtitle;
+    font-size:25px;
+}
+ a{
+    color:#187676;
 
 }
 span{

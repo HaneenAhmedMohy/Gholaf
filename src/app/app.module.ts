@@ -3,12 +3,13 @@ import { HttpClientModule } from '@angular/common/http';
 //App Module
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgForm, NgModel } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
-import {NgForm}  from '@angular/forms';
 
 
 // import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -16,7 +17,7 @@ import {NgForm}  from '@angular/forms';
 // import { ModalModule } from 'ngx-bootstrap/modal';
 
 import {  FservService } from './fserv.service';
-// import {  InsertService } from './insert.service';
+import { ShareDataService } from './share-data.service';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -43,7 +44,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { CompareValidatorDirective } from './shared/compare-validator.directive';
 import { HomenavComponent } from './homenav/homenav.component';
 import { PersonalaccountComponent } from './personalaccount/personalaccount.component';
-// import { HomenavComponent } from './homenav/homenav.component';
+import { SearchComponent } from './search/search.component';
 
 
 const routes: Routes =  [
@@ -77,6 +78,15 @@ const routes: Routes =  [
   {path:"myaccount",component:PersonalaccountComponent},
   
   
+  // { path: "personal", component: PesonalInfoComponent },
+  // { path: "favourite", component: FavouriteComponent },
+  // { path: "myorder", component: MyOrderComponent },
+  { path: "editinfo", component: EditInfoComponent },
+  { path: "logout", component:  HomeComponent },
+  {path:"payment",component:PaymentComponent} ,
+  // {path:'login',component:LoginComponent}
+
+  { path: "search", component: SearchComponent }
   
 ]
   
@@ -107,6 +117,7 @@ const routes: Routes =  [
     HomenavComponent,
     PersonalaccountComponent,
     // HomenavComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -117,11 +128,12 @@ const routes: Routes =  [
     // AngularFontAwesomeModule,
     FormsModule,
     RouterModule,
+    HttpModule,
     // BsDropdownModule.forRoot(),
     // TooltipModule.forRoot(),
     // ModalModule.forRoot()
   ],
-  providers: [ FservService ],
+  providers: [ FservService , ShareDataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

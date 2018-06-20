@@ -3,59 +3,70 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-sm-9">
-      <div class="row" >
-
-        <div class="col-sm-4 text-right mb-4" *ngFor=" let catigoryData of catigoryData">
-            <img src="{{catigoryData.img}}" class="img-fluid"/>
-            <!-- <p>
-                <span class="float-left"> {{catigoryData.stars}} </span> <span class="float-right"> {{catigoryData.bookName}}</span>
-            </p> -->
-            <p>
-              <span class="float-left"> {{catigoryData.num-downloads}} </span> <span class="float-right"> {{catigoryData.bookName}}</span>
-          </p>
-            <!-- <p class="text-right">{{catigoryData.author}}</p> -->
-            <p class="text-right">{{catigoryData.category}}</p>
-
+      <div class="row" > 
+          <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let catigoryData of catigoryData">
+              <div class="card mb-4">
+                <div class="image-container mb-3">
+                  <div class="overlay">	
+                    <i class="far fa-heart"></i>
+                    <button><i class="fas fa-shopping-cart"></i></button>
+                  </div>
+                  <img class="card-img-top" src="{{catigoryData.img}}" class="img-fluid" alt="Card image cap">
+                </div>
+                <div class="card-body p-0"> 
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <h5 class="card-title text-right">{{catigoryData.bname}} </h5>
+                    <div>
+                        <h6 class="text-right"> {{catigoryData.aname}} </h6>
+                        <h6 class="text-right float-left">{{catigoryData.category}} </h6>
+                    </div>
+                    
+                </div>
+                    <div class="addToCart">
+                      <i class="fas fa-shopping-cart mr-2"></i>
+                      <i class="far fa-heart"></i>
+                    </div>
+                </div>
+              
+            </div>
         </div>
-      </div>
-      
-    </div>
+      </div>    
+    
+
     <div class="col-sm-3 text-right">
       <div class="row">
-        <!-- <div class="col-12 mb-4">
-          <h3>السعر</h3>
-          <hr/>
-          <div id="slider-range"></div>
-          <div class="slidecontainer">
-             <span class="text-secondary">$50.0</span> 
-             <span class="float-right text-secondary">$890.0</span>
-          </div>
-        </div> -->
         <div class="col-12 mb-4">
             <h3>فئه الكتاب</h3>
             <hr/>
-           <div><span>خيال علمى</span> <input type="checkbox"></div>
-           <div> <span> دراما</span> <input type="checkbox"/></div>
-           <div> <span> مغامرة</span> <input type="checkbox"/></div>
-           <div> <span> رومانسية</span> <input type="checkbox"/></div>
-           <div> <span> غموض</span> <input type="checkbox"/></div>
-           <div> <span> رعب</span> <input type="checkbox"/></div>
-           <div> <span> دينية</span> <input type="checkbox"/></div>
-           <div> <span> قصص قصيرة</span> <input type="checkbox"/></div>
-           <div> <span> تاريخ</span> <input type="checkbox"/></div>  
+           <div><span>خيال علمى</span> <input type="radio" value="male" name="gender" #cat1 (change)="submitData( 'خيال علمى' )" /></div>
+           <div> <span> دراما</span> <input type="radio" value="male" name="gender" #cat2 (change)="submitData( 'دراما' )" /></div>
+           <div> <span> مغامرة</span> <input type="radio" value="male" name="gender" #cat3 (change)="submitData( 'مغامر' )" /></div>
+           <div> <span> رومانسية</span> <input type="radio" value="male" name="gender" #cat4 (change)="submitData( 'رومانسية' )" /></div>
+           <div> <span> غموض</span> <input type="radio" value="male" name="gender" #cat5 (change)="submitData( 'غموض' )" /></div>
+           <div> <span> رعب</span> <input type="radio" value="male" name="gender" #cat6 (change)="submitData( 'رعب' )" /></div>
+           <div> <span> دينية</span> <input type="radio" value="male" name="gender" #cat7 (change)="submitData( 'دينية' )" /></div>
+           <div> <span> قصص قصيرة</span> <input type="radio" value="male" name="gender" #cat8 (change)="submitData( 'قصص قصيرة' )" /></div>
+           <div> <span> تاريخ</span> <input type="radio" value="male" name="gender" #cat9 (change)="submitData( 'تاريخ' )" /></div>  
       </div>
       <div class="col-12 mb-4">
         <h3>الكاتب</h3>
         <hr/>
-        <div> <span> احسان عبد القدوس</span> <input type="checkbox"/></div>
-        <div> <span> احلام مستغانمى</span> <input type="checkbox"/></div>
-        <div> <span> أحمد خالد توفيق</span> <input type="checkbox"/></div>
-        <div> <span>  أحمد مراد</span> <input type="checkbox"/></div>
-        <div> <span> عمر طاهر</span> <input type="checkbox"/></div>
-        <div> <span> محمد صادق</span> <input type="checkbox"/></div>
-        <div> <span> نجيب محفوظ</span> <input type="checkbox"/></div>
+        <div> <span> احسان عبد القدوس</span> <input type="radio" value="male" name="gender" #au1 (change)="submitData( 'احسان عبد القدوس' )" /></div>
+        <div> <span> احلام مستغانمى</span> <input type="radio" value="male" name="gender" #au2 (change)="submitData( 'احلام مستغانمى' )" /></div>
+        <div> <span> أحمد خالد توفيق</span> <input type="radio" value="male" name="gender" #au3 (change)="submitData( 'احمد خالد توفيق' )" /></div>
+        <div> <span>  أحمد مراد</span> <input type="radio" value="male" name="gender" #au4 (change)="submitData( 'احمد مراد' )" /></div>
+        <div> <span> عمر طاهر</span> <input type="radio" value="male" name="gender" #au5 (change)="submitData( 'عمر طاهر' )" /></div>
+        <div> <span> محمد صادق</span> <input type="radio" value="male" name="gender" #au6 (change)="submitData( 'محمد صادق' )" /></div>
+        <div> <span> نجيب محفوظ</span> <input type="radio" value="male" name="gender" #au7 (change)="submitData( 'نجيب محفوظ' )" /></div>
       </div>
     </div>
   </div>
+
 </div>
- <app-footer></app-footer> 
+</div>

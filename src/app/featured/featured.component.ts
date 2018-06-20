@@ -5,16 +5,7 @@ import { Router } from '@angular/router';
   selector: 'app-featured',
   templateUrl: './featured.component.html',
   styleUrls: ['./featured.component.scss'],
-  styles:[ 
- `.aktif{background-color:#deeced;color:#177777}
-  .pasif{background-color:#177777}
-  a.nav-link{
-    color: white;
-    font-family: subtitle;
-    font-size: 2rem;
-  }` 
-
-  ]
+  
 })
 export class FeaturedComponent implements OnInit {
 

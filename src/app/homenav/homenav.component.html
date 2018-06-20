@@ -34,26 +34,30 @@
 </nav>
 
 <!-- header section -->
-
 <header class="text-white">
     <div class="table animated flip">
-      <div class="cell">
-        <h1 class="animated infinite bounce"> غلاف </h1>
-        <p class="text-white">إذا شعرت وأنت تقلب الصفحة الأخيرة في الكتاب الذي تقرأه أنك فقدت صديقاً عزيزاً فأعلم أنك قد قرأت كتاباً رائعا</p>
-        <div class="col-sm-6 offset-md-3">
-            <div class="input-group rotateInDownLeft">
-              <div class="input-group-prepend border-0">
-                <span class="input-group-text pr-3 pl-3 text-white" id="" aria-label="Large">بحث 
-                </span>
-              </div>
-              <input type="text" class="form-control text-gray text-right" placeholder="يمكنك البحث باسم الكتاب او المؤلف">
+        <div class="cell">
+            <h1 class="animated infinite bounce"> غلاف </h1>
+            <p class="text-white">إذا شعرت وأنت تقلب الصفحة الأخيرة في الكتاب الذي تقرأه أنك فقدت صديقاً عزيزاً فأعلم أنك قد قرأت كتاباً رائعا</p>
+            <h6>بول سوينى  </h6>
+            <div class="col-sm-6 offset-md-3">
+                <form name="search" #search="ngForm" >
+                  <div class="input-group rotateInDownLeft">
+                        <div class="input-group-prepend border-0 ">
+                                <!-- routerLink="/search" -->
+                            <button (click)="submitData(dataInput.value)" 
+                            type="submit" class="input-group-text pr-3 pl-4 text-white submit" id="search" aria-label="Large" >بحث 
+                        </button>
+                            <input type="text" name="search_input" #dataInput class="form-control text-gray text-right" placeholder="يمكنك البحث باسم الكتاب او المؤلف">
+                        </div>
+                  </div>
+                  </form>          
             </div>
         </div>
-      </div>
     </div>
-  </header>
+</header>
   
-
+<app-featured></app-featured>
   <!-- download section -->
 <section id="download" class=" pt-5 pb-5">
     <div class="container">

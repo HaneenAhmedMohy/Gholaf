@@ -8,12 +8,13 @@ h6{
 h5{
 	font-family:  paragrafs;
 	display: inline;
+    margin-left: 33px;
 }
 .card.mb-4{
 	border: none;
 }
 .fa-star:before{
-	color:#fedc00;
+	color:yellow;
 }
 .overlay .far.fa-heart{
 	font-size: 2rem;
@@ -42,12 +43,9 @@ img{
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	text-align: center;
-	z-index: 1000;
-
 }
 .image-container:hover img {
   opacity: 0.3;
-  cursor: pointer;
 }
 .image-container:hover .overlay {
   opacity: 1;
@@ -60,9 +58,7 @@ button{
     background-color:#177777;
     color:white;
     height:60px;
-	font-size:30px;
-	z-index: 2000;
-
+    font-size:30px;
 }
 img{
 	height:350px;
@@ -71,21 +67,15 @@ img{
 	text-align:right;
 }
 .rate{
-	float:left;
-	font-size: 0.8rem;
-}
-.info{
+	// display:inline-block;
 	float:left;
 }
 .addToCart{
 	display:none;
 }
-.icons{
-	color: #177777;
-}
 @media (max-width: 992px){
  	.addToCart{
- 		display:initial;
+ 		// display:inline-block;
  		float:left;
  		color:#177777;
  		font-size:20px;
@@ -93,7 +83,4 @@ img{
  	.overlay{
  		display:none;
  	}
- 	.image-container:hover img {
-	  	opacity: 1;
-	}
  }
