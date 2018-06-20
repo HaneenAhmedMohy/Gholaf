@@ -6,17 +6,25 @@
   <div class="container">
       <div class="row text-right">
           <div class="col-sm-5">
-            <h3 class="mb-4"> تتواصل معنا</h3>
-            <form class="">
+            <h3 class="mb-4"> تواصل معنا</h3>
+            <form  name="frm" #frm="ngForm">
                 <div class="row">
                         <div class="col-sm-12 mb-2">
-                                <input name="email_input" #mailInput class="form-control form-control-lg " type="text" placeholder="أدخل بريدك الألكترونى">
+                                <input required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="mailInput" #mailInput class="form-control form-control-lg " type="text" placeholder="أدخل بريدك الألكترونى">
+                                <div *ngIf="mailInput.touched" class=" ml-5 mr-5 divalert">
+                                        <div *ngIf="mailInput.errors?.required" class="alert alert-danger text-right">
+                                            يجب عليك ادخال بريدك الالكتروني
+                                        </div>
+                                        <div *ngIf="mailInput.errors?.pattern" class="alert alert-danger text-right ">
+                                            يجب عليك ادخال بريدك الالكتروني بشكل صحيح
+                                        </div>
+                                    </div>
                         </div>
                         <div class="col-sm-12 mb-2">
                                 <textarea  name="message_input" #meesageInput class="form-control form-control-lg " rows="3" placeholder="أدخل رسالتك"></textarea>
                         </div>
                         <div class="col-sm-12 mb-2 text-center">
-                                <button (click)="submitData(mailInput.value ,meesageInput.value)" class="btn y  btn-block btn-lg">أرسال</button>
+                                <button [disabled]="frm.invalid" type="submit" (click)="submitData(mailInput.value ,meesageInput.value)" (click)="open(content)" class="btn y  btn-block btn-lg" >أرسال</button>
                         </div>
                                 
                 </div>
@@ -46,7 +54,18 @@
     </div>
   </div>
 </section>
-
+<ng-template #content let-c="close" let-d="dismiss">
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close text-left" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true" class="text-white ">&times;</span>
+          </button>  
+        </div>
+          
+        <div class="modal-body text-center my-5">
+            <h6>لقد تم ارسال الرسالة بنجاح . شكرا</h6>
+        </div>
+</ng-template>
 
 <footer class="text-center py-3">
     <p> غلاف © 2018 جميع الحقوق محفوظة </p>

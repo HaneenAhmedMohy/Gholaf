@@ -30,7 +30,17 @@
         font-family: Noto Naskh Arabic;
     }
 }
+.modal-header{
+    background-color: #533a4f;
+}
+.email,.modal-footer button,input{
+    font-family: 'Noto Naskh Arabic'; 
+    float:right;
+}
+.modal-footer button{
+    background-color: #187676;
 
+}
 footer{
     background-color: #332031;
     color: white;
