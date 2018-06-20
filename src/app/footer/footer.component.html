@@ -1,5 +1,4 @@
 
-<!-- Footer Section  -->
 
 
 
@@ -11,15 +10,13 @@
             <form class="">
                 <div class="row">
                         <div class="col-sm-12 mb-2">
-                                <input class="form-control form-control-lg " type="text" placeholder="أدخل بريدك الألكترونى">
+                                <input name="email_input" #mailInput class="form-control form-control-lg " type="text" placeholder="أدخل بريدك الألكترونى">
                         </div>
                         <div class="col-sm-12 mb-2">
-                                <!-- <input class="form-control form-control-lg " type="" placeholder="Your Email"> -->
-                                <textarea class="form-control form-control-lg " rows="3" placeholder="أدخل رسالتك"></textarea>
+                                <textarea  name="message_input" #meesageInput class="form-control form-control-lg " rows="3" placeholder="أدخل رسالتك"></textarea>
                         </div>
                         <div class="col-sm-12 mb-2 text-center">
-                                <!-- btn-block -->
-                                <button class="btn y  btn-block btn-lg">أرسال</button>
+                                <button (click)="submitData(mailInput.value ,meesageInput.value)" class="btn y  btn-block btn-lg">أرسال</button>
                         </div>
                                 
                 </div>
@@ -33,9 +30,9 @@
               <div class="row text-right">
                   <div class="col-sm-4"></div>
                   <div class="col-sm-8">
-                        <img src="assets/facebook.png">
-                        <img src="assets/twitter.png" class="mx-2">
-                        <img src="assets/google.png">
+                        <a href="https://www.facebook.com/%D8%BA%D9%84%D8%A7%D9%81-706851546345486/?modal=admin_todo_tour"> <img src="assets/facebook.png"> </a>
+                        <a href="https://www.instagram.com/"> <img src="assets/twitter.png" class="mx-2"> </a>
+                        <a href="https://www.instagram.com/"> <img src="assets/instagram.png"/> </a>
                   </div>
               </div>
           </div>

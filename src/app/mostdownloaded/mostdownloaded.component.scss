@@ -46,6 +46,7 @@ img{
 }
 .image-container:hover img {
   opacity: 0.3;
+  cursor: pointer;
 }
 .image-container:hover .overlay {
   opacity: 1;

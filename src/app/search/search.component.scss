@@ -1,21 +1,3 @@
-hr{
-    width: 20px;
-    /* color: #177777; */
-    text-align: right;
-    height: 1px;
-    background-color: #177777;
-    margin-right: 0px;
-    margin-top: 0px;
-}
-h3{
-    margin-bottom: 2px;
-    font-family: Abdo Logo;
-}
-span{
-    margin-right: 7px;
-    font-family: Noto Naskh Arabic;
-}
-
 .row{
 	justify-content: center;
 }
@@ -64,7 +46,6 @@ img{
 }
 .image-container:hover img {
   opacity: 0.3;
-  cursor: pointer;
 }
 .image-container:hover .overlay {
   opacity: 1;
@@ -86,16 +67,15 @@ img{
 	text-align:right;
 }
 .rate{
-	display:inline-block;
+	// display:inline-block;
 	float:left;
 }
-
 .addToCart{
 	display:none;
 }
 @media (max-width: 992px){
  	.addToCart{
- 		
+ 		// display:inline-block;
  		float:left;
  		color:#177777;
  		font-size:20px;
