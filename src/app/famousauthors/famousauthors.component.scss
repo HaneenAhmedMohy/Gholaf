@@ -15,12 +15,8 @@ h5{
 .fa-star:before{
 	color:yellow;
 }
-.overlay .far.fa-heart{
-	font-size: 2rem;
-    color: #177777;
-    position: absolute;
-    top: 30px;
-    right: 15px;
+.icons{
+	color: #177777;
 }
 .image-container{
     position: relative;
@@ -33,31 +29,13 @@ img{
 	transition: .5s ease;
 	backface-visibility: hidden;
 }
-.overlay{
-	transition: .5s ease;
-  	opacity: 0;
- 	position: relative;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	text-align: center;
-}
+
 .image-container:hover img{
-  opacity: 0.3;
+  opacity: 0.7;
+cursor: pointer;
 }
 .image-container:hover .overlay {
   opacity: 1;
-}
-button{
-	position: absolute;
-    top: 290px;
-    width: 100%;
-    left: 0;
-    background-color:#177777;
-    color:white;
-    height:60px;
-    font-size:30px;
 }
 img{
 	height:250px;

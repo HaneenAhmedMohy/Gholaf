@@ -19,8 +19,13 @@
                     </div>
                     <h5 class="card-title text-right">{{mostdownloaded.bname}} </h5>
                     <div>
-                        <h6 class="text-right">احلام مستغانمى</h6>
-                        <h6 class="text-right info">{{mostdownloaded.numdownloads}} </h6>
+                        
+                        <h6 class="text-right">{{mostdownloaded.aname}}</h6>
+                        <h6 class="text-right info">
+                            <i class="fas fa-long-arrow-alt-down icons"></i>
+                          {{mostdownloaded.numdownloads}} </h6>
+                        
+                        <!-- <img src="assets/icons/down-arrow.png" class="icons"> -->
                     </div>
                     <div class="addToCart">
                         <i class="fas fa-shopping-cart mr-2"></i>
@@ -28,24 +33,7 @@
                     </div>
                 </div>
             </div>
-            <img class="card-img-top" src="{{mostdownloaded.img}}" class="img-fluid" alt="Card image cap">
-          </div>
-          <div class="card-body p-0"> 
-            <div class="rate">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-              <h5 class="card-title text-right">{{mostdownloaded.bname}} </h5>
-              <h6 class="text-right"> {{mostdownloaded.aname}} </h6>
-              <h6 class="text-right">{{mostdownloaded.numdownloads}} </h6>
-              <div class="addToCart">
-                <i class="fas fa-shopping-cart mr-2"></i>
-                <i class="far fa-heart"></i>
-              </div>
-          </div>
+           
         </div>
-    
+    </div>
 </div>
